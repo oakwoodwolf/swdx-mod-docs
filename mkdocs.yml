@@ -1,0 +1,37 @@
+site_name: Sonic World DX Mod Documentation
+site_url: https://oakwoodwolf.github.io/swdx-mod-docs/
+theme:
+  font:
+    text: Roboto
+  name: material
+  palette:
+    
+     # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      primary: deep purple
+      accent: purple
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      primary: deep purple
+      accent: purple
+      scheme: default
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: deep purple
+      accent: purple
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to system preference
+plugins:
+  - search
+extra:
+  version:
+    provider: mike
