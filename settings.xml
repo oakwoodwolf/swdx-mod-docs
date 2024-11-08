@@ -1,0 +1,15 @@
+<list>
+    <hud style="DX"/>
+    <heroes spinner=""/>
+    <victory timer=""/>
+    <round transition=""/>
+    <logo style=""/>
+    <bubbles on="" amount="" chance="" speed=""/>
+    <scrolling on="" speed="" alpha=""/>
+    <sounds life-pause="" loop-spin=""/>
+    <background x="1920" y="1080"/>
+    <gauge r="20" g="255" b="255" fr="120" fg="255" fb="255"/>
+    <author is="Team Konpeito"/>
+    <redring style="1"/>
+</list>
+    

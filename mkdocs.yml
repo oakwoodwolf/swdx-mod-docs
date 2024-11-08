@@ -1,6 +1,10 @@
 site_name: Sonic World DX Mod Documentation
 site_url: https://oakwoodwolf.github.io/swdx-mod-docs/
 theme:
+  features:
+    - content.code.select
+    - content.code.annotate
+    - content.code.copy
   font:
     text: Roboto
   name: material
@@ -35,3 +39,14 @@ plugins:
 extra:
   version:
     provider: mike
+nav:
+  - Home: index.md
+  - Themes: themes.md
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
