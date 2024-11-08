@@ -1,16 +1,21 @@
 site_name: Sonic World DX Mod Documentation
 site_url: https://oakwoodwolf.github.io/swdx-mod-docs/
 theme:
+  favicon: img/favicon.ico
+  logo: img/Mod.png
   features:
     - content.code.select
     - content.code.annotate
     - content.code.copy
+    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - toc.integrate
   font:
     text: Roboto
   name: material
   palette:
-    
-     # Palette toggle for automatic mode
+    # Palette toggle for automatic mode
     - media: "(prefers-color-scheme)"
       primary: deep purple
       accent: purple
@@ -23,7 +28,7 @@ theme:
       accent: purple
       scheme: default
       toggle:
-        icon: material/brightness-7 
+        icon: material/brightness-7
         name: Switch to dark mode
 
     # Palette toggle for dark mode
@@ -41,8 +46,18 @@ extra:
     provider: mike
 nav:
   - Home: index.md
-  - Themes: themes.md
+  - Themes:
+      - "File Reference":
+          - "XMLs": Theme/themes.md
+          - "Interface Index": Theme/Interface.md
+          - "Sound Index": Theme/Sound.md
+  - Discord: https://dc.railgun.works/sonicworlddx
+
 markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -50,3 +65,11 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+extra:
+  generator: false
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
