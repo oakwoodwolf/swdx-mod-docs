@@ -47,6 +47,9 @@ extra:
 nav:
   - Home: index.md
   - Themes:
+      - "Guide":
+          - "Installing": Theme\install.md
+          - "Creating": Theme\creation.md
       - "File Reference":
           - "XMLs": Theme/themes.md
           - "Interface Index": Theme/Interface.md

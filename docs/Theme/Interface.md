@@ -76,7 +76,7 @@ File resolutions **MUST MATCH!**, otherwise errors will occur. These are all sto
 | `TextTitle.png`         | 1440x630                                        | Atlas of text for zone names and headers.                                                                                   |
 | `TextTitle2.png`        | 1440x630                                        | Atlas of text for backdrop of zone names and headers, coloured in code.                                                     |
 | `TextTitleChao.png`     | 1440x630                                        | Atlas of text for Chao names and headers, matching `TextTitle2` backdrop.                                                   |
-| `Thumbnail.png`         | 1440x900                                        | Preview thumbnail in the Menu Themes Selection.                                                                             |
+| `Thumbnail.png`         | 720x450                                         | Preview thumbnail in the Menu Themes Selection.                                                                             |
 | `Transporter1.png`      | 1440x900                                        | Background for the Chao Transporter.                                                                                        |
 | `Transporter2.png`      | 1440x900                                        | Background for the Chao Transporter.                                                                                        |
 | `Transporter3.png`      | 1440x900                                        | Background for the Chao Transporter.                                                                                        |
