@@ -35,7 +35,7 @@
 !/media/xmlconnect/system
 /media/xmlconnect/system/*
 !/media/xmlconnect/system/ok.gif
-
+/site/*
 /var/*
 !/var/.htaccess
 
