@@ -375,59 +375,87 @@
 
 <h1 id="themes">Themes</h1>
 <h2 id="settingsxml">settings.xml</h2>
-<p>Each theme uses settings.xml to determine various functionality aspects of the theme, such as what HUD layout it should use, or what colour the special gauge is. A default settings.xml should look like this:
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;hud</span><span class="w"> </span><span class="na">style=</span><span class="s">””/</span><span class="nt">&gt;</span>
+<p><div class="language-xml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">settings.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;list&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;hud</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;DX&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;heroes</span><span class="w"> </span><span class="na">spinner=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;victory</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;round</span><span class="w"> </span><span class="na">transition=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;logo</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;bubbles</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">amount=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">chance=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;scrolling</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">alpha=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;sounds</span><span class="w"> </span><span class="na">life-pause=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">loop-spin=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nt">&lt;background</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;1920&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;1080&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">&lt;gauge</span><span class="w"> </span><span class="na">r=</span><span class="s">&quot;20&quot;</span><span class="w"> </span><span class="na">g=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">b=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">fr=</span><span class="s">&quot;120&quot;</span><span class="w"> </span><span class="na">fg=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">fb=</span><span class="s">&quot;255&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;author</span><span class="w"> </span><span class="na">is=</span><span class="s">&quot;Team Konpeito&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="nt">&lt;redring</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nt">&lt;/list&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+Each theme uses settings.xml to determine various functionality aspects of the theme, such as what HUD layout it should use, or what colour the special gauge is. A default settings.xml should look like this:
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;hud</span><span class="w"> </span><span class="na">style=</span><span class="s">””/</span><span class="nt">&gt;</span>
 </span></code></pre></div></p>
 <ul>
 <li>Alters HUD placement in-game to closest match any of the following options.</li>
 <li>DX, Legacy, SA1, SA2, Heroes, Shadow, 06, Unleashed, Colours, Colors, Generations, Forces, Frontiers, Classic</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;heroes</span><span class="w"> </span><span class="na">spinner=</span><span class="s">””/</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;heroes</span><span class="w"> </span><span class="na">spinner=</span><span class="s">””/</span><span class="nt">&gt;</span>
 </span></code></pre></div>
 <ul>
 <li>Set to 1 to enable separate spinners for each team member</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&lt;round</span><span class="w"> </span><span class="na">transition=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;round</span><span class="w"> </span><span class="na">transition=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>Set to 1 to enable the round transitional image from heroes</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&lt;logo</span><span class="w"> </span><span class="na">style=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;logo</span><span class="w"> </span><span class="na">style=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>Set to 1 to enable the R8 logo fly-in animation</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&lt;victory</span><span class="w"> </span><span class="na">timer=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;victory</span><span class="w"> </span><span class="na">timer=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>(CURRENTLY NOT FUNCTIONAL)</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&lt;author</span><span class="w"> </span><span class="na">is=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;author</span><span class="w"> </span><span class="na">is=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>Write down the creator of the theme here</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;bubbles</span><span class="w"> </span><span class="na">on=</span><span class="s">””</span><span class="w"> </span><span class="na">amount=</span><span class="s">””</span><span class="w"> </span><span class="na">chance=</span><span class="s">””</span><span class="w"> </span><span class="na">speed=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;bubbles</span><span class="w"> </span><span class="na">on=</span><span class="s">””</span><span class="w"> </span><span class="na">amount=</span><span class="s">””</span><span class="w"> </span><span class="na">chance=</span><span class="s">””</span><span class="w"> </span><span class="na">speed=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>See SA2 theme for details</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&lt;scrolling</span><span class="w"> </span><span class="na">on=</span><span class="s">””</span><span class="w"> </span><span class="na">speed=</span><span class="s">””</span><span class="w"> </span><span class="na">alpha=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&lt;scrolling</span><span class="w"> </span><span class="na">on=</span><span class="s">””</span><span class="w"> </span><span class="na">speed=</span><span class="s">””</span><span class="w"> </span><span class="na">alpha=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>See SA2 theme for details</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&lt;gauge</span><span class="w"> </span><span class="na">r=</span><span class="s">””</span><span class="w"> </span><span class="na">g=</span><span class="s">””</span><span class="w"> </span><span class="na">b=</span><span class="s">””</span><span class="w"> </span><span class="na">fr=</span><span class="s">””</span><span class="w"> </span><span class="na">fg=</span><span class="s">””</span><span class="w"> </span><span class="na">fb=</span><span class="s">””/</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;gauge</span><span class="w"> </span><span class="na">r=</span><span class="s">””</span><span class="w"> </span><span class="na">g=</span><span class="s">””</span><span class="w"> </span><span class="na">b=</span><span class="s">””</span><span class="w"> </span><span class="na">fr=</span><span class="s">””</span><span class="w"> </span><span class="na">fg=</span><span class="s">””</span><span class="w"> </span><span class="na">fb=</span><span class="s">””/</span><span class="nt">&gt;</span>
 </span></code></pre></div>
 <ul>
 <li>Set the normal and full gauge colours</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&lt;sounds</span><span class="w"> </span><span class="na">life-pause=</span><span class="s">””</span><span class="w"> </span><span class="na">loop-spin=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;sounds</span><span class="w"> </span><span class="na">life-pause=</span><span class="s">””</span><span class="w"> </span><span class="na">loop-spin=</span><span class="s">””/</span><span class="nt">&gt;</span><span class="w"> </span>
 </span></code></pre></div>
 <ul>
 <li>Pauses music on life gain or loop the spin sound</li>
 </ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&lt;background</span><span class="w"> </span><span class="na">x=</span><span class="s">””</span><span class="w"> </span><span class="na">y=</span><span class="s">””/</span><span class="nt">&gt;</span>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nt">&lt;background</span><span class="w"> </span><span class="na">x=</span><span class="s">””</span><span class="w"> </span><span class="na">y=</span><span class="s">””/</span><span class="nt">&gt;</span>
 </span></code></pre></div>
 <ul>
 <li>Sets the background resolution</li>
