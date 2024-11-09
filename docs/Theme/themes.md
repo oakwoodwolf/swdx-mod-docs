@@ -76,6 +76,8 @@ A settings.xml is **REQUIRED** for a theme mod, as it is how the game recognises
 
 - (CURRENTLY NOT FUNCTIONAL)
 
+### Author
+
 ```xml
 <author is=""/>
 ```
@@ -133,11 +135,15 @@ Feel free to look at any base game theme’s settings xml and folder structure t
 
 ## kerning.xml
 
+### Font Kerning
+
 ```xml title="kerning.xml" linenums="1"
 --8<-- "kerning.xml"
 ```
 
 Most themes leave this file out, which uses the defaults shown above. If your custom text letters overlaps each other, you may need to alter these values. Most of the lines are kerning for all png files that begin with `text`, except for one:
+
+### HUD Kerning
 
 ```xml
 <number k="20"/>

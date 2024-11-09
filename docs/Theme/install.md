@@ -12,8 +12,8 @@ Otherwise, contact the modder to figure out what version the theme is developed 
   - IMPORTANT! Earlier V1.2 versions have bugged theme loading and may fail to recognise the mod!
 - A Theme mod of your choice.
 - Extracting software ([WinRar](https://www.win-rar.com/download.html?&L=0) or [7zip](https://7-zip.org/download.html) recommended!)
-
-For this tutorial, I will be installing The [Mario Theme](https://gamebanana.com/mods/34202). The instructions are the same for every team.
+- Text editing software (Notepad is included on every Windows machine, [:material-microsoft-visual-studio-code: VSCode](https://code.visualstudio.com/) helps with color coding)
+For this tutorial, I will be installing The [Mario Theme](https://gamebanana.com/mods/34202) by [MothraBlaze](https://gamebanana.com/members/1631514). The instructions are the same for every theme.
 
 ## Instructions
 
