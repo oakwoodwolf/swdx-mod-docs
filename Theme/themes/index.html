@@ -640,6 +640,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#author" class="md-nav__link">
+    <span class="md-ellipsis">
+      Author
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#bubbles" class="md-nav__link">
     <span class="md-ellipsis">
       Bubbles
@@ -695,6 +704,30 @@
       kerning.xml
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="kerning.xml">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#font-kerning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Font Kerning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hud-kerning" class="md-nav__link">
+    <span class="md-ellipsis">
+      HUD Kerning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -900,6 +933,7 @@
 <ul>
 <li>(CURRENTLY NOT FUNCTIONAL)</li>
 </ul>
+<h3 id="author">Author</h3>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&lt;author</span><span class="w"> </span><span class="na">is=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
 <ul>
@@ -943,6 +977,7 @@
 </ul>
 <p>Feel free to look at any base game theme’s settings xml and folder structure to figure out how they function. Remember in-game you can type <code>themedata</code> into the console to reload the theme’s settings without having to exit the game.</p>
 <h2 id="kerningxml">kerning.xml</h2>
+<h3 id="font-kerning">Font Kerning</h3>
 <div class="language-xml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">kerning.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
@@ -1084,6 +1119,7 @@
 </span><span id="__span-12-70"><a id="__codelineno-12-70" name="__codelineno-12-70"></a><span class="nt">&lt;/list&gt;</span>
 </span></code></pre></div></td></tr></table></div>
 <p>Most themes leave this file out, which uses the defaults shown above. If your custom text letters overlaps each other, you may need to alter these values. Most of the lines are kerning for all png files that begin with <code>text</code>, except for one:</p>
+<h3 id="hud-kerning">HUD Kerning</h3>
 <div class="language-xml highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&lt;number</span><span class="w"> </span><span class="na">k=</span><span class="s">&quot;20&quot;</span><span class="nt">/&gt;</span>
 </span></code></pre></div>
 <ul>
