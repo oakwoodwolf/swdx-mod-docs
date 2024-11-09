@@ -476,6 +476,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Porting
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -485,6 +496,94 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#where-to-get-theme-mods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Where to get theme mods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instructions
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instructions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-get-the-original-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Get the original files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-organize-the-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Organize the files
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-adding-a-settingsxml" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Adding a settings.xml
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-testing-in-game" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Testing in-game
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -656,8 +755,115 @@
 
 
 <h1 id="porting">Porting</h1>
-<p>Themes in Sonic World DX are comprehensive, allowing you to modify almost every sound and interface element in the game. In Sonic World R10 and earlier, themes are much simpler, only altering the buttons, backgrounds, logo and music. </p>
+<p>Themes in Sonic World DX are comprehensive, allowing you to modify almost every sound and interface element in the game. In Sonic World R10 and earlier, themes are much simpler, only altering the buttons, backgrounds, logo and music.  </p>
 <p>They will not work in Sonic World DX without changes, as the file format is different, so you will need to "port" it to DX. This page focuses on how exactly you can do that.</p>
+<h2 id="where-to-get-theme-mods">Where to get theme mods</h2>
+<p>There are two places to get theme mods for Sonic World R10 or earlier:</p>
+<ol>
+<li>The <a href="https://gamebanana.com/mods/cats/2135"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.249 0v3h1.5V1.5h1.505V3h-1.505v4.5h1.5v-3h3.002V3h-1.505V0Zm6.002 4.498v1.5h1.5V4.501Zm1.5 1.5v10.503h1.5V5.998Zm0 10.503h-1.5V19.5h1.5zm-1.5 2.998h-1.505v1.5h1.5zm-1.5 1.5h-3.002v1.5h3.001zm-3.002 1.5H6.75V24h9zm-8.999 0V21h-3v1.5zm-3-1.5v-1.497H2.248v1.5zm-1.501-1.497v-2.997H9.75v-1.5H.748v4.497zm7.502-4.497h2.997v-1.5H9.751Zm2.997-1.5h1.5v-1.501h-1.5zm1.5-1.501h1.501V7.506h-1.5z"/></svg></span> Sonic World Gamebanana</a> (This is DIFFERENT to the SWDX Gamebanana)</li>
+<li>The R7-R9 Themes Section of the <a href="https://sonicworldfangame.com/mods/themes/">Sonic World Website</a></li>
+</ol>
+<p>This tutorial assumes you're porting for personal usage. <strong>Do not upload these mods without credit and permission to the original creator</strong>.</p>
+<p>For this tutorial, I will be porting the <a href="https://gamebanana.com/mods/33769">Mario Kart DS Theme</a> by <a href="https://gamebanana.com/members/1663337">Harukaze</a></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><strong>Latest</strong> version of Sonic World DX (V1.2.7)</li>
+<li>IMPORTANT! Earlier V1.2 versions have bugged theme loading and may fail to recognise the mod!</li>
+<li>A Theme mod of your choice.</li>
+<li>A code editor (<a href="https://code.visualstudio.com/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VSCode</a> is recommended, Notepad also works but is harder.)</li>
+</ul>
+<p>This tutorial assumes you know how to install mods already, and will ignore the downloading steps for that reason.</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="1-get-the-original-files">1. Get the original files</h3>
+<ul>
+<li>Create a new folder in Mods with the name of the mod</li>
+<li>Drag the contents of the last folder (with all of the image and audio files) into that folder.</li>
+</ul>
+<h3 id="2-organize-the-files">2. Organize the files</h3>
+<p>Sonic World DX splits the files based on category (Character/Sound/Interface).</p>
+<ul>
+<li>Create 2 folders, named <code>Interface</code> and <code>Sounds</code>.</li>
+<li>Move all the image files into <code>Interface</code>.</li>
+<li>Create another new folder in <code>Sounds</code> named <code>Music</code>.</li>
+<li>Rename all the audio files to remove the <code>Menu</code> prefix.</li>
+<li>For the file simply named <code>Menu</code>, rename it to <code>Main</code>.</li>
+<li>Drag all the audio files into <code>Music</code>.</li>
+</ul>
+<p>It should appear something like this:</p>
+<ul>
+<li>Interface/<ul>
+<li><em>Background.png</em></li>
+<li><em>Buttons.png</em></li>
+<li><em>Circle.png</em></li>
+<li><em>Circle2.png</em></li>
+<li><em>Logo.png</em></li>
+<li><em>Logo_flash.png</em></li>
+<li><em>Logo_ring.png</em></li>
+<li><em>Logo_sonic.png</em></li>
+<li><em>Logo_world.png</em></li>
+<li><em>Sky.png</em></li>
+</ul>
+</li>
+<li>Sounds/<ul>
+<li>Menu/<ul>
+<li><em>Credits.ogg</em></li>
+<li><em>Intro.ogg</em></li>
+<li><em>Main.ogg</em></li>
+<li><em>Options.ogg</em></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-adding-a-settingsxml">3. Adding a settings.xml</h3>
+<p>Now that the structure is correct, we need the mod to be recognised by the game. We use a <code>settings.xml</code> to recognise it.</p>
+<ul>
+<li>Copy the <code>settings.xml</code> located in <code>Data/Themes</code> folder of Sonic World DX.</li>
+<li>Paste it into the root of your folder (where interface and sounds are).</li>
+<li>The contents will look something like this:</li>
+</ul>
+<div class="language-xml highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">settings.xml</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="nt">&lt;list&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="w">    </span><span class="nt">&lt;hud</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;DX&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="nt">&lt;heroes</span><span class="w"> </span><span class="na">spinner=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="nt">&lt;victory</span><span class="w"> </span><span class="na">timer=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="w">    </span><span class="nt">&lt;round</span><span class="w"> </span><span class="na">transition=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="nt">&lt;logo</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;bubbles</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">amount=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">chance=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="nt">&lt;scrolling</span><span class="w"> </span><span class="na">on=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">speed=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">alpha=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="nt">&lt;sounds</span><span class="w"> </span><span class="na">life-pause=</span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="na">loop-spin=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="hll"><span class="w">    </span><span class="nt">&lt;background</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;1920&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;1080&quot;</span><span class="nt">/&gt;</span>
+</span></span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="nt">&lt;gauge</span><span class="w"> </span><span class="na">r=</span><span class="s">&quot;20&quot;</span><span class="w"> </span><span class="na">g=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">b=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">fr=</span><span class="s">&quot;120&quot;</span><span class="w"> </span><span class="na">fg=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">fb=</span><span class="s">&quot;255&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;author</span><span class="w"> </span><span class="na">is=</span><span class="s">&quot;Team Konpeito&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="nt">&lt;redring</span><span class="w"> </span><span class="na">style=</span><span class="s">&quot;1&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="nt">&lt;/list&gt;</span>
+</span></code></pre></div></td></tr></table></div>
+<ul>
+<li>You could test the theme in-game now and it would load, but it would look incorrect as the background will not load.</li>
+<li>To fix this, edit the highlighted line to the following values</li>
+</ul>
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&lt;background</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;1440&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;900&quot;</span><span class="nt">/&gt;</span>
+</span></code></pre></div>
+<p>This is the resolution of all R9 themes.</p>
+<h3 id="5-testing-in-game">5. Testing in-game</h3>
+<p>Now time to test the theme!</p>
+<ul>
+<li>Select the theme in the custom themes menu.</li>
+<li>The theme should be working perfectly!</li>
+</ul>
+<p><img align="left" alt="Ported Theme Intro" src="../img/port0.png" /> <img align="right" alt="Ported Theme Menu" src="../img/port1.png" /></p>
 
 
 
