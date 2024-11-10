@@ -41,11 +41,17 @@ theme:
         name: Switch to system preference
 plugins:
   - search
+  - mike
 extra:
+  generator: false
   version:
+    alias: true
     provider: mike
 nav:
-  - Home: index.md
+  - Home: 
+      - "Introduction":
+          - "Welcome": index.md
+          - "Mod Organization": modsxml.md
   - Themes:
       - "Guide":
           - "Installing": Theme\install.md
@@ -55,6 +61,8 @@ nav:
           - "XMLs": Theme/themes.md
           - "Interface Index": Theme/Interface.md
           - "Sound Index": Theme/Sound.md
+  - Music:
+      - "Custom Music": Music/music.md
   - Discord: https://dc.railgun.works/sonicworlddx
 
 markdown_extensions:
@@ -72,8 +80,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list
-extra:
-  generator: false
+
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
