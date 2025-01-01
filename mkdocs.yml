@@ -52,11 +52,14 @@ nav:
       - "Introduction":
           - "Welcome": index.md
           - "Mod Organization": modsxml.md
+  - Characters:
+      - "Guide":
+          - "Fragmotion Animation Tutorial": Fragmotion/Animating.md
   - Themes:
       - "Guide":
-          - "Installing": Theme\install.md
-          - "Creating": Theme\creation.md
-          - "Porting": Theme\porting.md
+          - "Installing": Theme/install.md
+          - "Creating": Theme/creation.md
+          - "Porting": Theme/porting.md
       - "File Reference":
           - "XMLs": Theme/themes.md
           - "Interface Index": Theme/Interface.md
