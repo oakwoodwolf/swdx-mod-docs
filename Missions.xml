@@ -1,0 +1,6 @@
+<information>
+	<mission1 origin="4" is="normal" time="0" mach="0" perfect="0" timetrial="120" idealscore="130000" idealtime="150"  tag="Industrial Rush" info="Infiltrate the factory and reach the core of the water plant!"/>
+	<mission2 origin="25" is="normal" time="0" mach="0" perfect="0"  timetrial="75" idealtime="90" idealscore="80000" tag="Cyberspace" info="Navigate through rockets and rails to escape this Cyberspace!"/>
+	<mission3 origin="9" is="collect" time="0" mach="0" perfect="0" tag="Mega Muck Madness" idealtime="180" timetrial="120" info="Find the ten Access Cards!"/>
+	<mission4 origin="4" is="encore" time="0" mach="0" perfect="0" idealscore="130000" idealtime="150" tag="Prison Island" info="Reach the ruby in this strange refinery!"/>
+</information>
