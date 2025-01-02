@@ -11,6 +11,7 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
     - toc.integrate
+    - content.tooltips
   font:
     text: Roboto
   name: material

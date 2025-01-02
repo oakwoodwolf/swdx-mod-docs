@@ -1,57 +1,45 @@
-# Animating in Fragmotion
- 
+# Animating in FragMOTION
 
 ## 0: Intro
 
-With a little bit of reading, you can start animating in 20 minutes, or less! Let's begin by opening Fragmotion!
+With a little bit of reading, you can start animating in 20 minutes, or less! Let's begin by opening FragMOTION!
 
 - Depending on your screen size, and customizations some interface options may look different.
-- To anyone using a screen reader, I tried my best. Hopefully the information comes out properly.
+- Icons used in this tutorial reflect icons on the program. They can be hovered over to see their names.
 
-NOTE: This guide uses game files to teach the sheer basics of animation in Fragmotion, be sure to make a backup of any file you modify, or you will need to redownload the game. The animation process is the same when making actual mods. This guide does NOT teach you how to create a proper mod, please reference (Insert mod XML guide here). Enjoy!
+**NOTE:** This guide uses game files to teach the sheer basics of animation in FragMOTION, be sure to make a backup of any file you modify, or you **will need to redownload the game.** This process can then be used to make actual mods.
 
-- To backup a character please right-click the file you will be modifying, and make a copy. You will right click a blank area within your folder to paste, when asked whether to overwrite, or rename the file select "Rename". You now have a backup of the file we will be modifying.
+- To backup a character please right-click the file you will be modifying, and make a copy. You will right click a blank area within your folder to paste, when asked whether to overwrite, or rename the file select `Rename`. You now have a backup of the file we will be modifying.
 
 ### 0.1: Software Required
 
-[Fragmotion 1.2.6](https://gamebanana.com/tools/6575)
+[FragMOTION 1.2.6](https://gamebanana.com/tools/6575){ .md-button .md-button--primary }
 
-- Fragmotion initially asks you to Pray to our lord, and saviour Shadow the Hedgehog. Please feel free to skip this, when the program opens up move your mouse to the top-left of your window where it says "File", please navigate all the way to "Help" then select, "Register Fragmotion". Fragmotion is an abandoned product that no longer allows you to Purchase a key.
+- FragMOTION is known as "nagware", where when used freely, it will have an obnoxious popup unless you type a prayer into your textbox.
+- The purchasing page no longer works for FragMOTION, meaning you cannot get rid of this nag without an existing key. Go into the program for the first time, navigate to `Help/Register FragMOTION` on the toolbar on the top of the winder and insert these:
 
-- Product Code: 9B0BC130010E4C00CE0088CA0C4C14AB
-- Registration Code: A6F82D4423AF34AC59FA5D6291F4BE7A
+- Product Code: `9B0BC130010E4C00CE0088CA0C4C14AB`
+- Registration Code: `A6F82D4423AF34AC59FA5D6291F4BE7A`
 
 ### 0.2: Optional Software
 
-[Blender](https://www.blender.org/)
-
-[FBX Converter](https://gamebanana.com/tools/16462) - Free
-
-[Better FBX Importer & Exporter](https://blendermarket.com/products/better-fbx-importer--exporter) - 28 USD
-
-[Positioning Assistance Tool](https://gamebanana.com/tools/10426)
-
-[Height Chart](https://gamebanana.com/tools/11329)
-
-- Blender is an alternative to Fragmotion for animating, but requires you to export the file as FBX 2009 so it can be imported to Fragmotion, then re-exported as B3D a file that is compatible with SWDX. 
-
-- FBX Converter can convert the files for free, but doesn't always work.
-
-- Better FBX Importer & Exporter converts the files directly in Blender on export, and has shown to be far more convenient then the free Alternative. 
+[:material-blender-software: Blender](https://www.blender.org/ "A better animation suite, doesn't support .B3D"){ .md-button .md-button--secondary }
+[FBX Converter - Free](https://gamebanana.com/tools/16462 "To convert Blender's FBX to FBX 2009"){ .md-button .md-button--secondary }
+[Better FBX Importer & Exporter (Paid Addon)](https://blendermarket.com/products/better-fbx-importer--exporter "To convert Blender's FBX to FBX 2009"){ .md-button .md-button--secondary }
+[:material-ruler: Positioning Assistance Tool](https://gamebanana.com/tools/10426 "For positioning vehicle animations"){ .md-button .md-button--secondary }
+[:fontawesome-solid-ruler-combined: Height Chart](https://gamebanana.com/tools/11329 "For measuring character height."){ .md-button .md-button--secondary }
 
 For the purposes of this tutorial we will be Animating in Fragmotion, so none of this is needed unless you plan on using your own models.
 
-
-
 ## 1: Camera, Common Interface Options
 
-
 In the middle of the screen you will see a Grid, let's call this a "Field". It's where we will see your character on screen!
-Pressing right click allows you to rotate the camera, if you right click in middle it'll rotate kind of how you expect it to. 
+Pressing right click allows you to rotate the camera, if you right click in middle it'll rotate kind of how you expect it to.
+
 If you right click the outside however it will rotate in a different way, kind of like a plane rotates.
 If you middle click the screen you are able to move around when dragging your mouse.
 
-![In the middle of the screen you will see a Grid, let's call this a "Field". It's where we will see your character on screen! It will have a blue-grayish backdrop, and have multiple black lines within.](img/A1.png)
+![The field.](img/A1.png)
 
 - Right click to Rotate
 - Middle Click to Move
@@ -59,29 +47,20 @@ If you middle click the screen you are able to move around when dragging your mo
 
 ### 1.1: Camera Angles
 
-See those yellow people at the top?
-Selecting 3D let's you view a character as if it were in the game.
-The other yellow "people" are for different views feel free to click on them, and see what they do.
+![The tooltips at the top, camera angles are highlighted. ](img/A2.png)
 
-![At the top left of your screen you will see File, Edit, Vertex, etc. Make your way over to Transform, and below that are Yellow Humanoid figures as described above. They are modified with Left-click. ](img/A2.png)
+The following buttons control Camera Angles.
 
-- Yellow People control Camera Angles
-- 3D is similar to the in game Camera
-- Left, Right, Top, Bottom, Forward, and Backward are for Bio, and Victory Animations
+- ![3D View](icons/view3d.ico "View 3D") is similar to the in-game Camera
+- ![Left View](icons/viewleft.ico "View Left"), ![Right View](icons/viewright.ico "View Right"), ![Top View](icons/viewtop.ico "View Top"), ![Bottom View](icons/viewbottom.ico "View Bottom"), ![Front View](icons/viewfront.ico "View Front"), and ![Back View](icons/viewback.ico "View Back") are for Bio, and Victory Animations
 
-### 1.2: Vertices, and Bones
+In-game animations will always be viewed like the ![3D View](icons/view3d.ico "View 3D"), with Bios using ![Front View](icons/viewfront.ico "View Front").
 
-Say you accidentally bring up a bunch of yellow dots, these are called "Vertices". You can enable, or disable them via the Green dots at the top of your interface.
-
-![At the top left of your screen, follow the text prompts all the way to Help, below Help you will see a blue cube, beside that to the right are five symbols that represent ways to view what are called Vertice, the triangles, that make up your character. The red Circle is a Wireframe, the two triangles are Backfaces, things you normally do not see on a character, the bones do as shown, show bones with line, and dots, the GREEN dots show your vertices which will be the yellow dots on screen, the skull plus crossbones is for your blue colored bones, the three colorful lines are for XYZ axis, and finally the last one is for your grid. These are all modified by left clicking. ](img/A12.png)
-
-- The Green dots are Vertices
-- Vertices represent the triangles that make up your character
-- You can turn them off with the FOUR green dots at the top
-
-If you have blue dots, you can disable them via the Skull next to the green dots. These are your characters "Skeleton".
-
-![I have disabled the Skull, and Crossbones since my model was showing blue dots.](img/A13.png)
+- The yellow dots on a model are Vertices
+  - Vertices represent the individual points that make up your model
+  - You can turn them off with the ![Green dots](icons/showverts.ico "Show Vertices")
+- Blue dots with lines are bones.
+  - you can disable them via the ![Skull](icons/skeleton.ico "Show Skeleton") next to the ![Green dots](icons/showverts.ico "Show Vertices"). These are your characters "Skeleton".
 
 Now that you know these common buttons, let's open a character!
 
@@ -89,53 +68,53 @@ Now that you know these common buttons, let's open a character!
 
 If you want to edit a character, File > Open > Sonic World DX > Data > Characters > 3 letter name > Model > model.b3d.
 
-![Top left, mouse over File, left-click, mouse over Open.., left-click](img/A51.png) ![Find your folder called Sonic World DX 1.2.4, or any other version numbering, Left-click, find the folder called Data, left-click.](Characters folder, left-click/A52.png) ![For this tutorial I modify Shadow, he is located under the folder SHA, left-click.](img/A53.png)
-![model, left-click](img/A54.png) ![There are multiple files in this folder that represent costumes, and shadows various Select Screen poses. Find Model, or Model.b3d if you have extensions enabled, double left-click.](img/A55.png) ![The model should now appear in the "Field".](img/A56.png)
+![Open a file](img/A51.png) ![SWDX Folder.](img/A52.png) ![Data folder](img/A53.png)
+![Characters subfolder](img/A54.png) ![Sha (Shadow) subfolder.](img/A55.png) ![The model should now appear in the "Field".](img/A56.png)
 
 So here we've opened Shadow the Hedgehog.
 The character will be blacked out if using a model from SWDX.
 
-![](img/A3.png)
+![The viewport after import](img/A3.png)
 
 - B3D Files are a "lossy" format used by Blitz3D, i.e SWDX.
 - You can also open FBX 2009, OBJ, DAE, and UGH files among many others
 - When modifying your character alway save as .UGH, save as .B3D when you're done
-- All characters are blacked out because of "Reference Maps" which create layers on a character that show up Black in fragmotion
-- MODEL.b3d = In game Model
+- All characters are blacked out because of "RefMaps" which create layers on a character that show up Black in fragmotion
+- MODEL.b3d = In-game Model
 - BIO.b3d = Character Select Model
 
-### 2.1: Let there be color!
+### 2.1: Let there be color
 
-On the right, there's a section called "Model". Click on that.
-You'll see the Model,Smoothing Groups, Textures, and Materials menu.
+On the right, there's a section called ![](icons/model.ico)"Model". Click on that.
+You'll see the ![](icons/meshfolder.ico) Mesh, ![](icons/smoothfolder.ico)Smoothing Groups, ![](icons/texfolde.ico)Textures, and ![](icons/materialfolder.ico)Materials menu.
 
-![On the right side of your screen you will see a menu called "Model", if not look around the center-right for some Tabs labeled Animations, Skeleton, Model,Textures, Schema. Select Model with left-click.](img/A4.png)
+![Model tab.](img/A4.png)
 
 You can expand Materials with the little plus button to the left, and a material object the same way.
 Click on a grey box.
 
-![Scroll down within the Panel that has just appeared, and you will see little blue circles that represent Materials. Next to them is a plus which opens up to show Textures.](img/A5.png)
-![The second texture, and all textures below it are most likely set to AlphaMap you will see this on the bottom right screen after left-clicking any texture. We want to change all of their bubbles to BumpMap via left-click making sure the bubbles are Black, not White. If you come across anything that says ColorMap, and it is filled it leave it alone.](img/A6.png)
+![Materials panel.](img/A5.png)
+![The second texture in the material list](img/A6.png)
 
 Example of Materials
 
-![](img/A7.png)
+![Materials Example](img/A7.png)
 
-Under properties you will see "Texture Layer" and "Type". Select Bumpmap under the type. Your material will change from a LIGHT grey box to a 3D grey box. You should see some color on the model now!
+Under properties you will see `Texture Layer` and `Type`. Select `Bump-map` under the type. Your material will change from a ![LIGHT grey box](icons/alphamap.ico "Alpha Map") to a ![3D grey box](icons/bumpmap.ico "Bump Map"). You should see some color on the model now!
 
-- If you are colorblind, or lack depth perception you will make sure the little bubbles are filled next to "BumpMap" in this part of the tutorial
+![Texture layer properties](img/A9.png)
+![The texture layers](img/A10.png)
+![The model with fur visible](img/A11.png)
 
-![](img/A9.png)
-![](img/A10.png)
-![](img/A11.png)
+- Bump Maps are not supported in Blitz3D. This will just let you see the model without the RefMaps. They will automatically be converted back into alpha maps on export, which is intended.
 
 Now that we can see our character, let's set up our Interface, and Tools!
 
 ## 3: Interface
 
-Let's go to the "Tools" menu, and select "Show Tree"
+Let's go to the "Tools" menu, and select ![Show tree](icons/treeview.ico "Show Tree")
 
-![Show tree is beneath the Model Menu, and properties. It will be next to a tiny image of a Hammer, and Wrench.](img/A14.png)
+![The tree view location.](img/A14.png)
 
 For now you can select "Hide" since we aren't using the Tools
 
@@ -145,8 +124,8 @@ While were here you can grab the "PADDED" bar that's grey, and drag the tool men
 
 Feel free to customize it to your liking.
 
-![The padded bar is the bar that says Tools with a wrench, and hammer. You left-click, and drag it to remove it from the interface. You can drag it to any edge of the screen to lock it back down. I lock mine to the left side.](img/A16.png)
-![A17](img/A17.png)
+![The padder bar for the tools window, to allow docking and undocking.](img/A16.png)
+![A customized viewport.](img/A17.png)
 
 - We setup our Tool Tree
 - Selected Hide so we don't activate anything
@@ -159,40 +138,29 @@ You can click on the Animations tab to view animations.
 
 ![Animations tab is where we found the Models tab earlier.](img/A18.png)
 
-There is a media player on the bottom of the screen.
-It will play the animation forward, backward, or frame by frame
-a frame being a single image.
+There is an animation player on the bottom of the screen. It will play the animation forward, backward, or frame-by-frame, a frame being a single image.
 
-![Very bottom of the screen spanning the entire length is the media player. It consists of a sliding triangle tab similar to Windows Media Player, or Youtube. The current, start, and end frame. Then lastly skip to first frame, move back a frame, play backward, play forwards, move forward a frame, and skip to last frame buttons. All in order from left to right.](img/A19.png)
+![The animation player toolbar, at the bottom of the window.](img/A19.png)
 
+Example here, of Frame 8 of Shadow walking.
 
-Example here, of Frame 8 , or Image 8 of Shadow walking.
+![Image 8 of Shadow walking.](img/A20.png)
 
-![Move the frames forward, and backwards using the buttons to see the animation playing in slow motion/](img/A20.png)
+- The GREEN box is the frame where where the animation playback starts
+- WHITE is your current frame
+- The RED box is where the looping of the animation ends.
+  Let's look at the blue lines again, it might hurt your eyes, or look hideous, but they are important to the way Animating works within SWDX.
 
-This bar will show you the MAX number of frames in this "Animation", which is essentially just a video, in the RED box.
-The GREEN box is where the animation starts, and the WHITE is your current frame, or image
-Let's look at the blue lines again, it might hurt your eyes, or look hideous, but they are important to the way Animating works within SWDX.
-![](img/A21.png)
+So at the top ![Skull](icons/skeleton.ico "Show Skeleton")
 
-So at the top "Show Skeleton"
-
-![I select the Skull and Crossbones to enable them via left-click.](img/A22.png)
-
-Then double click your first animation, the "IDLE".
-This weird menu with a lot of scary dots will show up.
-These are called keyframes, and they aren't really important to us yet, but will be later.
-On the left of this scary box you can see Skeleton's bones spread out in a "Tree".
-
-![I double left-click the Sha_Idle animation under the Animation tab bringing up the Keyframe Editor](img/A23.png)
-![The keyframe Editor shows your characters Bones in a tree format in the far left menu where you will see "Skeleton", reference, chr_Shadow_HD, etc. You will also see Edit, Select, Pose. These are used in advanced techniques. Below that are the Skeletal Animation, and Vertex Animation. SWDX uses Skeletal animation so please ignore Vertex Animation. Following along the bar are the Cut, Copy, Paste, Paste Blended, and Delete buttons. These only activate if you left-click a yellow bubble. Next is Undo, and Redo. Then you have the animation player buttons again. We'll go over the rest of the interface further along in the tutorial.](img/A24.png)
+![Shadow's skeleton](img/A22.png)
 
 If you click on any of the parts of the skeleton, say the neck, you'll see a red dot, which is the bone they define as "NECK" in your "FIELD", it has some green tree branches. Everything above shadows neck should be selected.
 These are all of the bones attached to the Neck.
 So when Shadows Neck moves, these bones move with it.
 You can see that when you play the animation.
 
-![Clicking a bone shows a RED dot in the "Field", this dot is what is selected currently. There are other GREEN dots branching off that are connected to this bone. If you select NECK you can see everything above shadows neck has changed colors, so all of the bones attached to his head are connected to the NECK bone. Incase you are colorblind this is what I am referencing.](img/A25.png)
+![The viewport with the "neck" selected.](img/A25.png)
 
 - You have a Media player that can control the "Animation"
 - WHITE box shows the CURRENT image
@@ -204,59 +172,64 @@ You can see that when you play the animation.
 - The Keyframe Editor shows you a list of your bones that you can select
 - Selected bones show up in the "Field" as RED dots, connected bones show up as GREEN dots
 
-
-
 ### 3.2: Skeletal Animation Widget
 
-Let's go back to Tools. If you scroll down you'll see "Skeletal Animation".
+Let's go back to Tools. If you scroll down you'll see ![](icons/toolcategory.ico "Skeletal Animation")"Skeletal Animation".
 This is how we are going to modify our animations, or even create new ones
-You will click on the "Skeletal Anim Widget".
+You will click on ![](icons/widget.ico)"Skeletal Anim Widget".
 
 ![Scroll down in the Tool Tree to find Skeletal Anim Widget, normally at the bottom right of the screen. I have moved mine to the left for this tutorial.](img/A26.png)
 
 This circle will show up, you can drag it by left clicking the transparent area.
 So you're able to move it out of the work space as I have here.
-You have 6 tools on this "Widget", the "Bone Select" tool, which allows you to select a blue circle, or "Bone". 
+You have 6 tools on this "Widget"
 
-![A triangle with a semi-transparent circle will show up in your "Field". There will be a Bone, Circle with an Arrow, Arrows going in different directions, Two Circles, and a Humanoid figure walking. You can left-click the semi transparent area to drag this tool around your "Field". There are 7 slices of pie on the triangle we will be focusing on the Center, Top, Bottom-Left, and Bottom-Right for this tutorial. The BONE allows you to select bones.](img/A27.png)
+![The Skeletal Animation Widget.](img/A27.png)
 
-The "Translate" tool, which allows you to move a bone in any direction.
-You just select translate, and it's as simple as holding left click, and dragging!
+| Tool                                           | Description                                                                 |
+| ---------------------------------------------- | --------------------------------------------------------------------------- |
+| ![](icons/bone.ico "Select bone")              | Click to select a bone.                                                     |
+| ![](icons/translate.ico "Translate bone")      | Drag to move a selected bone for that frame.                                        |
+| ![](icons/rotate.ico "Rotate bone")            | Drag to rotate a selected bone based on the field for that frame.                   |
+| ![](icons/rotatelocal.ico "Rotate bone local") | Drag to rotate a selected bone based on the previous bones rotation for that frame. |
+| ![](icons/scale.ico "Scale bone")              | Drag to resize a selected bone for that frame.                                      |
 
-![The Circle with an Arrow moving towards the right is the translate tool.](img/A28.png)
+===   "![](icons/bone.ico "Select bone") Select bone"
+    Click a bone to select it.
 
+    ![The Circle with an Arrow moving towards the right is the translate tool.](img/A28.png)
+===   "![](icons/translate.ico "Translate bone") Translate"
+    Drag (hold left click) to move a selected bone for that frame.
 
+    ![The Circle with an Arrow moving towards the right is the translate tool.](img/A28.png)
+===   "![](icons/rotate.ico "Rotate bone") Rotate"
+    The "Rotate" tool, allows you to rotate a bone.
 
-Then you have the "Rotate" tool, which as it suggests allows you to rotate a bone
+    ![Rotated neck](img/A29.png)
 
-![The Two arrows going in opposite directions is the Rotate Tool, the one with the L is Local Rotate, please ignore the Rotate with an L.](img/A29.png)
+    If you can't rotate in the way you'd like, try ![](icons/rotatelocal.ico "Rotate bone local")
 
+===  "![](icons/scale.ico "Scale bone") Scale"
+    The "scale key" tool allows you to change the size of an object!
+    Currently our directions are unlocked so when testing this out you may be confused as to why it's so wonky.
+    We also skip inverse kinematics, I ACTUALLY have no clue what that does, feel free to mess with it though.
 
-We skip the Rotate key local tool, it isn't important for what we're learning currently.
-The "scale key" tool allows you to change the size of an object!
-Currently our directions are unlocked so when testing this out you may be confused as to why it's so wonky.
-We also skip inverse kinematics, I ACTUALLY have no clue what that does, feel free to mess with it though.
-
-
-![We now select the two circles one smaller, and one larger, this is the SCALE tool which let's you size things to be larger, or smaller.](img/A30.png)
+    ![We now select the two circles one smaller, and one larger, this is the SCALE tool which let's you size things to be larger, or smaller.](img/A30.png)
 
 See these colors, they represent your X, Y, Z which are your Cardinal Directions.
 
-![The TOP slices of Pie in the triangle represents your Y direction, UP, DOWN. The Bottom-Left piece of pie represents X, LEFT, and RIGHT. The Bottom-Right piece of pie represents Z, FORWARD, and BACKWARDS. The Center piece of pie is every direction. You can move in all directions with the center of the pie, but it isn't very accurate.](img/A31.png)
+![The axes.](img/A31.png)
 
-Select the _L tool at the top of your screen, and colorful lines will show up representing X, Y, Z.
-We call these "Axis".
+Select the [Show Axis](icons/showaxis.ico "Show Axis") tool at the top of your screen, and colorful lines will show up representing X, Y, Z axes. The lines correspond to the axis on the widget.
 
 ![Top of your screen to the right of the Skull and Crossbones. Left-click the very odd looking Lines to visually see your Axis on screen.](img/A32.png)
-
-
 
 Mousing over the colors on your triangle you can see we have of course X Y Z, and it says "restrict" which means movement of said object will only occur on those "Axis"
 The yellow represents "Free" movement in any direction then the other colors are essential diagnal movement.
 
 When animating in SWDX we usually use Red, Blue, and Green. Yellow itself isn't very accurate.
 NOW everytime you swap tools it will remember the LAST used color you've chosen
-for that tool. I've locked translate(movement) ,now I'm going to move shadows nose on the red axis as an example then swap to rotate.
+for that tool. I've locked translate(movement). Now I'm going to move shadows nose on the Y axis as an example then swap to rotate.
 
 ![Selecting any piece of the pie will lock your directions on one of the Axis, whether it's X,Y, or Z.](img/A33.png)
 You can see that when swapping to Rotate, it reverts to Yellow, free movement.
@@ -273,8 +246,8 @@ Here you see "Keyframe Translation Tool".
 Yours may look slightly different then mine due to some bugs with my version.
 You can ignore your XYZ coordinate, these are used in more advanced placement options for the character. Feel free to mess around if you would like.
 
-Applyto allows you to select where an "Image" or "Frame" edit you make goes
-You can open it's dropdown menu. Current frame is the image you are on now, frames before is everything before your image, after is everything after it's a bit self explanatory. Loop will be whatever the green, and red box say at the bottom on the player. Then All frames is every image, this is useful for when you want a characters eyes to always be open, you just make the edit on "All frames".
+Applyto allows you to select where an Frame edit you make goes
+You can open it's dropdown menu. Current frame is the frame currently viewed, frames before is everything before your frame inclusive, after is everything after the fame inclusive. Loop will be any frames within the red and green range in the player. Then All frames is every frame, this is useful for when you want a characters eyes to always be open, you just make the edit on "All frames".
 
 ![](img/A36.png)
 
@@ -286,10 +259,6 @@ Affect Children will allow the red bone you have selected to move other bones th
 
 Uniform keeps everything at the same scale when stretching pieces out. That way stuff doesn't look wonky.
 
-
-
-
-
 - Skeletal Animation Tool is our main Animation Tool
 - Translate Moves an Object, Rotate rotates an object, and Scale can make it bigger, or smaller.
 - RED represents Y, BLUE represents X, and GREEN represents Z, you can lock tools to "Axis"
@@ -298,26 +267,20 @@ Uniform keeps everything at the same scale when stretching pieces out. That way 
 - Uniform property changes whether your scale is Uniform, or not
 - AfffectChildren property changes whether the GREEN bones move with a RED bone, or not.
 
-
-
 ## 4: Keyframe Editor
 
 So you've been messing around while reading this, how do we retain the actions, or animations you've been making?
 
 For this we go back to the "Keyframe Editor" by double clicking your animation.
 
-You'll see a Red Line, it's currently on "Image" 1 for me or column 1
-On the left you'll see these green boxes that represent rotation, translation, and scale which we messed around with earlier. Anything I do to this "Image" will create a new yellow bubble on column 1 beside rotation, translation, or scale besides whatever bone I have selected.
+You'll see a Red Line, it's currently on frame 1 for me or column 1
+On the left you'll see these green boxes that represent rotation, translation, and scale which we messed around with earlier. Anything I do to this frame will create a new yellow bubble on column 1 beside rotation, translation, or scale besides whatever bone I have selected.
 
-![The Red line is below your media player buttons, and should be on whatever frame you have selected. The boxes will be underneath your skeleton, and bones on the left of the keyframe editor. These boxes represent Translation, Rotation, and Scale a yellow bubble will show up everytime we modify something in the "Field".](img/A37.png)
-
-
+![The red line defines the current frame.](img/A37.png)
 
 I've used right-click + Hold, and Drag to make a box around ALL of these bubbles, then I'm going to delete them using my DEL key on the keyboard. Any bubble that is BLUE is selected. Now I'm going to press play, and my neck no longer moves between "Images"!
 
 ![Note: That I am modifying the NECK bone, there are only 3 possible bubbles in the NECK column. I delete them all for this tutorial across the row, and keep the bubbles on frame one.](img/A38.png)
-
-
 
 ![I modified Shadows nose in a previous animation so I can see that even without his neck moving the nose still moves when playing the animation.](img/A39.png)
 Image two the head no longer flips back, but his nose does plop back down.
@@ -325,9 +288,7 @@ Image two the head no longer flips back, but his nose does plop back down.
 Let's make shadows head fully rotate for some nightmare fuel!
 ![](img/A40.png)
 
-
 I'm going to move to the last frame with my red line, by left clicking on the number bar at the top of the screen, you can also move frames with the arrows at the bottom of the play bar, or by dragging the little bar on the timeline.
-
 
 ![I moved to the final frame without placing any new bubbles, then placed three bubbles each in the movement slots. That essentialy loops the animation. Tip for all you screen readers out there. My frame one, and final frame are now the same.](img/A41.png)
 
@@ -346,7 +307,7 @@ The one with red lines, moves all of your bubbles.
 ### 4.1: Finally Animating
 
 So here I've created some bubbles on the final frame using the red dot Key.
-I'm going to click the double arrow WITHOUT the red sides. We're swapping over to this mode so we don't keep making bubbles. 
+I'm going to click the double arrow WITHOUT the red sides. We're swapping over to this mode so we don't keep making bubbles.
 
 ![](img/A43.png)
 
@@ -354,17 +315,15 @@ Now we move to frame nine of our idle.
 
 ![We duplicated frame one on the final frame, and now we're moving to frame nine which is the middle of our animation to rotate shadows head so we can get some real rotation going.](img/A44.png)
 
-Here you can see I have moved shadows head on this "Image", or "Frame", a bubble has shown up under the ninth frame of the keyframe editor in the rotation section.
+Here you can see I have moved shadows head on this frame, a bubble has shown up under the ninth frame of the keyframe editor in the rotation section.
 
-![The image moves by itself because of interpolation, the program creates invisible bubbles that are predicting shadows head movement based on our first, and last frame.](img/A45.png)
+![The frame moves by itself because of interpolation, the program creates invisible bubbles that are predicting shadows head movement based on our first, and last frame.](img/A45.png)
 
-You'll notice that the image is moving by itself without you actually creating any new keyframes as we move along the frames,this is called interpolation. The program determines the path of the characters where all these bubbles are empty. It essentially fills in the blanks for you!
-
+You'll notice that the frame is moving by itself without you actually creating any new keyframes as we move along the frames,this is called interpolation. The program determines the path of the characters where all these bubbles are empty. It essentially fills in the blanks for you!
 
 ![Shadows head should not do a weird half cock rotation.](img/A46.gif)
 
 This doesn't quite get the head to rotate, but it does show how keyframes work. These are the basic essentials needed to animate in fragmotion, for a full rotation we're going to move to the middle of frame nine, and seventeen. I've gone ahead and rotated Shadows head creating a new keyframe.
-
 
 ![We move to the middle of the center frame, and the final frame to rotate shadows head a little bit more, which completes the rotation instead of half cocking it.](img/A47.png)
 
@@ -388,17 +347,15 @@ This is how animating works in fragmotion! It's super easy, and simple to do :)
 - Empty bubbles automatically fill themselves in when playing an animation they're just invisible
 - Interpolation, and Keyframes are your most powerful tools when animating
 
-
-
 ## 5: Exporting
 
 When you're done you can goto File> Export, and see your handiwork in game, be sure to backup the original model.b3d, and to save as a Blitz Basic 3D Files (.b3d).
 
 - MODEL.b3d = In game Model
 - BIO.b3d = Character Select Model
-### 5.1: FIN
-BOOM we're in game!
+
+The animation is now in the game.
 
 ![Head should rotate in game, thank for listening, or reading. Bye!](img/A50.gif)
 
-
+While this isnt a real animation useful for the game, the skills used to make it are enough to make any animation your imagination could think of. You just need to look up non-Sonic World animation videos to learn.
