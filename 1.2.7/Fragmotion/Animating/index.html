@@ -1,0 +1,1703 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Fragmotion/Animating/">
+      
+      
+        <link rel="prev" href="../../modsxml/">
+      
+      
+        <link rel="next" href="../../Theme/install/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Fragmotion Animation Tutorial - Sonic World DX Mod Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#animating-in-fragmotion" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Sonic World DX Mod Documentation" class="md-header__button md-logo" aria-label="Sonic World DX Mod Documentation" data-md-component="logo">
+      
+  <img src="../../img/Mod.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sonic World DX Mod Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Fragmotion Animation Tutorial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.3 16-.7-2h-3.2l-.7 2H7.8L11 7h2l3.2 9zM20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12zm-9.15 3.96h2.3L12 9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../.." class="md-tabs__link">
+          
+  
+  Home
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Characters
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Theme/install/" class="md-tabs__link">
+          
+  
+  Themes
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Stage/media/" class="md-tabs__link">
+          
+  
+  Stage
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Music/music/" class="md-tabs__link">
+          
+  
+  Music
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://dc.railgun.works/sonicworlddx" class="md-tabs__link">
+        
+  
+    
+  
+  Discord
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Sonic World DX Mod Documentation" class="md-nav__button md-logo" aria-label="Sonic World DX Mod Documentation" data-md-component="logo">
+      
+  <img src="../../img/Mod.png" alt="logo">
+
+    </a>
+    Sonic World DX Mod Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_1">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../modsxml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Mod Organization
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Characters
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Characters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fragmotion Animation Tutorial
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Fragmotion Animation Tutorial
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#0-intro" class="md-nav__link">
+    <span class="md-ellipsis">
+      0: Intro
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="0: Intro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#01-software-required" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.1: Software Required
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#02-optional-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.2: Optional Software
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-camera-common-interface-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      1: Camera, Common Interface Options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1: Camera, Common Interface Options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-camera-angles" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1: Camera Angles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-setting-up-a-character-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2: Setting up a Character Model
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2: Setting up a Character Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-let-there-be-color" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1: Let there be color
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      3: Interface
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3: Interface">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-basic-animating-interface" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1: Basic Animating interface
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-skeletal-animation-widget" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2: Skeletal Animation Widget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-tool-properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.3: Tool Properties
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-keyframe-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      4: Keyframe Editor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4: Keyframe Editor">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-finally-animating" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1: Finally Animating
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-important-please-read" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2: IMPORTANT PLEASE READ
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-exporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      5: Exporting
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Themes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Themes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/porting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    File Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            File Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XMLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/Interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/Sound/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sound Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Stage
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Stage
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    File Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            File Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Stage/media/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Media
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Music
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Music
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Music/music/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Custom Music
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://dc.railgun.works/sonicworlddx" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Discord
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="animating-in-fragmotion">Animating in FragMOTION</h1>
+<h2 id="0-intro">0: Intro</h2>
+<p>With a little bit of reading, you can start animating in 20 minutes, or less! Let's begin by opening FragMOTION!</p>
+<ul>
+<li>Depending on your screen size, and customizations some interface options may look different.</li>
+<li>Icons used in this tutorial reflect icons on the program. They can be hovered over to see their names.</li>
+</ul>
+<p><strong>NOTE:</strong> This guide uses game files to teach the sheer basics of animation in FragMOTION, be sure to make a backup of any file you modify, or you <strong>will need to redownload the game.</strong> This process can then be used to make actual mods.</p>
+<ul>
+<li>To backup a character please right-click the file you will be modifying, and make a copy. You will right click a blank area within your folder to paste, when asked whether to overwrite, or rename the file select <code>Rename</code>. You now have a backup of the file we will be modifying.</li>
+</ul>
+<h3 id="01-software-required">0.1: Software Required</h3>
+<p><a class="md-button md-button--primary" href="https://gamebanana.com/tools/6575">FragMOTION 1.2.6</a></p>
+<ul>
+<li>FragMOTION is known as "nagware", where when used freely, it will have an obnoxious popup unless you type a prayer into your textbox.</li>
+<li>
+<p>The purchasing page no longer works for FragMOTION, meaning you cannot get rid of this nag without an existing key. Go into the program for the first time, navigate to <code>Help/Register FragMOTION</code> on the toolbar on the top of the winder and insert these:</p>
+</li>
+<li>
+<p>Product Code: <code>9B0BC130010E4C00CE0088CA0C4C14AB</code></p>
+</li>
+<li>Registration Code: <code>A6F82D4423AF34AC59FA5D6291F4BE7A</code></li>
+</ul>
+<h3 id="02-optional-software">0.2: Optional Software</h3>
+<p><a class="md-button md-button--secondary" href="https://www.blender.org/" title="A better animation suite, doesn't support .B3D"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.58 3.12v.01c-.31 0-.62.09-.87.26-.5.35-.56.93-.11 1.3L14.46 7l-8.73.03h-.01C5 7.03 4.3 7.5 4.16 8.1c-.16.61.34 1.12 1.1 1.12l4.43-.01-7.93 6.09c-.76.57-.99 1.52-.52 2.12.48.61 1.49.61 2.26 0l4.3-3.53s-.07.48-.06.76c0 .29.1.85.23 1.28.29.93.78 1.78 1.46 2.53.7.77 1.57 1.39 2.57 1.83 1.03.47 2.17.71 3.34.71 1.16 0 2.31-.25 3.35-.72 1-.44 1.86-1.07 2.56-1.84.68-.75 1.17-1.61 1.46-2.53.14-.47.23-.94.29-1.41 0-.47 0-.94-.06-1.41-.13-.91-.44-1.77-.94-2.55-.44-.71-1-1.34-1.69-1.87l-6.89-5.29a1.42 1.42 0 0 0-.84-.26m2.76 6.09c1.16 0 2.25.38 3.12 1.08.44.36.79.78 1.04 1.25.27.46.44 1.01.5 1.57.04.56-.04 1.12-.23 1.66-.2.54-.52 1.04-.95 1.49-.89.9-2.13 1.42-3.48 1.42-1.34 0-2.59-.51-3.48-1.41-.43-.44-.75-.95-.95-1.49a3.9 3.9 0 0 1-.22-1.66c.05-.56.22-1.09.48-1.57.26-.47.62-.89 1.06-1.25.86-.71 1.96-1.09 3.11-1.09m.1 1.4c-.78 0-1.5.28-2.03.73-.54.46-.91 1.1-.94 1.84-.04.75.26 1.45.79 1.97.54.53 1.32.85 2.18.85s1.63-.32 2.18-.85c.53-.52.83-1.22.79-1.97-.04-.74-.41-1.38-.94-1.84-.53-.45-1.25-.73-2.03-.73"/></svg></span> Blender</a>
+<a class="md-button md-button--secondary" href="https://gamebanana.com/tools/16462" title="To convert Blender's FBX to FBX 2009">FBX Converter - Free</a>
+<a class="md-button md-button--secondary" href="https://blendermarket.com/products/better-fbx-importer--exporter" title="To convert Blender's FBX to FBX 2009">Better FBX Importer &amp; Exporter (Paid Addon)</a>
+<a class="md-button md-button--secondary" href="https://gamebanana.com/tools/10426" title="For positioning vehicle animations"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m1.39 18.36 1.77-1.76L4.58 18l1.06-1.05-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.42 1.41L10.59 12l-1.42-1.41 1.42-1.42 2.47 2.48 1.06-1.06-2.47-2.48 1.41-1.41 1.41 1.41 1.07-1.06-1.42-1.41 1.42-1.42L18 6.7l1.07-1.06-2.47-2.48 1.76-1.77 4.25 4.25L5.64 22.61z"/></svg></span> Positioning Assistance Tool</a>
+<a class="md-button md-button--secondary" href="https://gamebanana.com/tools/11329" title="For measuring character height."><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M.2 468.9C2.7 493.1 23.1 512 48 512h416c26.5 0 48-21.5 48-48v-96c0-26.5-21.5-48-48-48h-48v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80h-64v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80h-64v80c0 8.8-7.2 16-16 16s-16-7.2-16-16v-80h-80c-8.8 0-16-7.2-16-16s7.2-16 16-16h80v-64h-80c-8.8 0-16-7.2-16-16s7.2-16 16-16h80v-64h-80c-8.8 0-16-7.2-16-16s7.2-16 16-16h80V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v416c0 1.7.1 3.3.2 4.9"/></svg></span> Height Chart</a></p>
+<p>For the purposes of this tutorial we will be Animating in Fragmotion, so none of this is needed unless you plan on using your own models.</p>
+<h2 id="1-camera-common-interface-options">1: Camera, Common Interface Options</h2>
+<p>In the middle of the screen you will see a Grid, let's call this a "Field". It's where we will see your character on screen!
+Pressing right click allows you to rotate the camera, if you right click in middle it'll rotate kind of how you expect it to.</p>
+<p>If you right click the outside however it will rotate in a different way, kind of like a plane rotates.
+If you middle click the screen you are able to move around when dragging your mouse.</p>
+<p><img alt="The field." src="../img/A1.png" /></p>
+<ul>
+<li>Right click to Rotate</li>
+<li>Middle Click to Move</li>
+<li>You can mouse over any selectable object within fragmotion, and a popup will appear that shows you the name of an interface option</li>
+</ul>
+<h3 id="11-camera-angles">1.1: Camera Angles</h3>
+<p><img alt="The tooltips at the top, camera angles are highlighted. " src="../img/A2.png" /></p>
+<p>The following buttons control Camera Angles.</p>
+<ul>
+<li><img alt="3D View" src="../icons/view3d.ico" title="View 3D" /> is similar to the in-game Camera</li>
+<li><img alt="Left View" src="../icons/viewleft.ico" title="View Left" />, <img alt="Right View" src="../icons/viewright.ico" title="View Right" />, <img alt="Top View" src="../icons/viewtop.ico" title="View Top" />, <img alt="Bottom View" src="../icons/viewbottom.ico" title="View Bottom" />, <img alt="Front View" src="../icons/viewfront.ico" title="View Front" />, and <img alt="Back View" src="../icons/viewback.ico" title="View Back" /> are for Bio, and Victory Animations</li>
+</ul>
+<p>In-game animations will always be viewed like the <img alt="3D View" src="../icons/view3d.ico" title="View 3D" />, with Bios using <img alt="Front View" src="../icons/viewfront.ico" title="View Front" />.</p>
+<ul>
+<li>The yellow dots on a model are Vertices</li>
+<li>Vertices represent the individual points that make up your model</li>
+<li>You can turn them off with the <img alt="Green dots" src="../icons/showverts.ico" title="Show Vertices" /></li>
+<li>Blue dots with lines are bones.</li>
+<li>you can disable them via the <img alt="Skull" src="../icons/skeleton.ico" title="Show Skeleton" /> next to the <img alt="Green dots" src="../icons/showverts.ico" title="Show Vertices" />. These are your characters "Skeleton".</li>
+</ul>
+<p>Now that you know these common buttons, let's open a character!</p>
+<h2 id="2-setting-up-a-character-model">2: Setting up a Character Model</h2>
+<p>If you want to edit a character, File &gt; Open &gt; Sonic World DX &gt; Data &gt; Characters &gt; 3 letter name &gt; Model &gt; model.b3d.</p>
+<p><img alt="Open a file" src="../img/A51.png" /> <img alt="SWDX Folder." src="../img/A52.png" /> <img alt="Data folder" src="../img/A53.png" />
+<img alt="Characters subfolder" src="../img/A54.png" /> <img alt="Sha (Shadow) subfolder." src="../img/A55.png" /> <img alt="The model should now appear in the &quot;Field&quot;." src="../img/A56.png" /></p>
+<p>So here we've opened Shadow the Hedgehog.
+The character will be blacked out if using a model from SWDX.</p>
+<p><img alt="The viewport after import" src="../img/A3.png" /></p>
+<ul>
+<li>B3D Files are a "lossy" format used by Blitz3D, i.e SWDX.</li>
+<li>You can also open FBX 2009, OBJ, DAE, and UGH files among many others</li>
+<li>When modifying your character alway save as .UGH, save as .B3D when you're done</li>
+<li>All characters are blacked out because of "RefMaps" which create layers on a character that show up Black in fragmotion</li>
+<li>MODEL.b3d = In-game Model</li>
+<li>BIO.b3d = Character Select Model</li>
+</ul>
+<h3 id="21-let-there-be-color">2.1: Let there be color</h3>
+<p>On the right, there's a section called <img alt="" src="../icons/model.ico" />"Model". Click on that.
+You'll see the <img alt="" src="../icons/meshfolder.ico" /> Mesh, <img alt="" src="../icons/smoothfolder.ico" />Smoothing Groups, <img alt="" src="../icons/texfolde.ico" />Textures, and <img alt="" src="../icons/materialfolder.ico" />Materials menu.</p>
+<p><img alt="Model tab." src="../img/A4.png" /></p>
+<p>You can expand Materials with the little plus button to the left, and a material object the same way.
+Click on a grey box.</p>
+<p><img alt="Materials panel." src="../img/A5.png" />
+<img alt="The second texture in the material list" src="../img/A6.png" /></p>
+<p>Example of Materials</p>
+<p><img alt="Materials Example" src="../img/A7.png" /></p>
+<p>Under properties you will see <code>Texture Layer</code> and <code>Type</code>. Select <code>Bump-map</code> under the type. Your material will change from a <img alt="LIGHT grey box" src="../icons/alphamap.ico" title="Alpha Map" /> to a <img alt="3D grey box" src="../icons/bumpmap.ico" title="Bump Map" />. You should see some color on the model now!</p>
+<p><img alt="Texture layer properties" src="../img/A9.png" />
+<img alt="The texture layers" src="../img/A10.png" />
+<img alt="The model with fur visible" src="../img/A11.png" /></p>
+<ul>
+<li>Bump Maps are not supported in Blitz3D. This will just let you see the model without the RefMaps. They will automatically be converted back into alpha maps on export, which is intended.</li>
+</ul>
+<p>Now that we can see our character, let's set up our Interface, and Tools!</p>
+<h2 id="3-interface">3: Interface</h2>
+<p>Let's go to the "Tools" menu, and select <img alt="Show tree" src="../icons/treeview.ico" title="Show Tree" /></p>
+<p><img alt="The tree view location." src="../img/A14.png" /></p>
+<p>For now you can select "Hide" since we aren't using the Tools</p>
+<p><img alt="Scroll down in the tree menu to find &quot;Hide&quot;." src="../img/A15.png" /></p>
+<p>While were here you can grab the "PADDED" bar that's grey, and drag the tool menu to the far left of your screen to expand your view of it, and make the workspace easier to use. You are able to drag any workspace to any location on your screen, but for the purposes of this tutorial I use the left side for "TOOLS"</p>
+<p>Feel free to customize it to your liking.</p>
+<p><img alt="The padder bar for the tools window, to allow docking and undocking." src="../img/A16.png" />
+<img alt="A customized viewport." src="../img/A17.png" /></p>
+<ul>
+<li>We setup our Tool Tree</li>
+<li>Selected Hide so we don't activate anything</li>
+<li>Changed our UI to better fit our needs</li>
+</ul>
+<h3 id="31-basic-animating-interface">3.1: Basic Animating interface</h3>
+<p>Let's move on to something, more interesting.
+You can click on the Animations tab to view animations.</p>
+<p><img alt="Animations tab is where we found the Models tab earlier." src="../img/A18.png" /></p>
+<p>There is an animation player on the bottom of the screen. It will play the animation forward, backward, or frame-by-frame, a frame being a single image.</p>
+<p><img alt="The animation player toolbar, at the bottom of the window." src="../img/A19.png" /></p>
+<p>Example here, of Frame 8 of Shadow walking.</p>
+<p><img alt="Image 8 of Shadow walking." src="../img/A20.png" /></p>
+<ul>
+<li>The GREEN box is the frame where where the animation playback starts</li>
+<li>WHITE is your current frame</li>
+<li>The RED box is where the looping of the animation ends.
+  Let's look at the blue lines again, it might hurt your eyes, or look hideous, but they are important to the way Animating works within SWDX.</li>
+</ul>
+<p>So at the top <img alt="Skull" src="../icons/skeleton.ico" title="Show Skeleton" /></p>
+<p><img alt="Shadow's skeleton" src="../img/A22.png" /></p>
+<p>If you click on any of the parts of the skeleton, say the neck, you'll see a red dot, which is the bone they define as "NECK" in your "FIELD", it has some green tree branches. Everything above shadows neck should be selected.
+These are all of the bones attached to the Neck.
+So when Shadows Neck moves, these bones move with it.
+You can see that when you play the animation.</p>
+<p><img alt="The viewport with the &quot;neck&quot; selected." src="../img/A25.png" /></p>
+<ul>
+<li>You have a Media player that can control the "Animation"</li>
+<li>WHITE box shows the CURRENT image</li>
+<li>GREEN box shows the FIRST image</li>
+<li>RED box shows the LAST image</li>
+<li>"Animations" are really just "images" that you put together to make a "Video"</li>
+<li>These "Videos" play in the game under certain names like "IDLE"</li>
+<li>You can open a box that shows you your "images" by double-clicking an "Animation", The Keyframe Editor</li>
+<li>The Keyframe Editor shows you a list of your bones that you can select</li>
+<li>Selected bones show up in the "Field" as RED dots, connected bones show up as GREEN dots</li>
+</ul>
+<h3 id="32-skeletal-animation-widget">3.2: Skeletal Animation Widget</h3>
+<p>Let's go back to Tools. If you scroll down you'll see <img alt="" src="../icons/toolcategory.ico" title="Skeletal Animation" />"Skeletal Animation".
+This is how we are going to modify our animations, or even create new ones
+You will click on <img alt="" src="../icons/widget.ico" />"Skeletal Anim Widget".</p>
+<p><img alt="Scroll down in the Tool Tree to find Skeletal Anim Widget, normally at the bottom right of the screen. I have moved mine to the left for this tutorial." src="../img/A26.png" /></p>
+<p>This circle will show up, you can drag it by left clicking the transparent area.
+So you're able to move it out of the work space as I have here.
+You have 6 tools on this "Widget"</p>
+<p><img alt="The Skeletal Animation Widget." src="../img/A27.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="" src="../icons/bone.ico" title="Select bone" /></td>
+<td>Click to select a bone.</td>
+</tr>
+<tr>
+<td><img alt="" src="../icons/translate.ico" title="Translate bone" /></td>
+<td>Drag to move a selected bone for that frame.</td>
+</tr>
+<tr>
+<td><img alt="" src="../icons/rotate.ico" title="Rotate bone" /></td>
+<td>Drag to rotate a selected bone based on the field for that frame.</td>
+</tr>
+<tr>
+<td><img alt="" src="../icons/rotatelocal.ico" title="Rotate bone local" /></td>
+<td>Drag to rotate a selected bone based on the previous bones rotation for that frame.</td>
+</tr>
+<tr>
+<td><img alt="" src="../icons/scale.ico" title="Scale bone" /></td>
+<td>Drag to resize a selected bone for that frame.</td>
+</tr>
+</tbody>
+</table>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1"><img alt="" src="../icons/bone.ico" title="Select bone" /> Select bone</label><label for="__tabbed_1_2"><img alt="" src="../icons/translate.ico" title="Translate bone" /> Translate</label><label for="__tabbed_1_3"><img alt="" src="../icons/rotate.ico" title="Rotate bone" /> Rotate</label><label for="__tabbed_1_4"><img alt="" src="../icons/scale.ico" title="Scale bone" /> Scale</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Click a bone to select it.</p>
+<p><img alt="The Circle with an Arrow moving towards the right is the translate tool." src="../img/A28.png" /></p>
+</div>
+<div class="tabbed-block">
+<p>Drag (hold left click) to move a selected bone for that frame.</p>
+<p><img alt="The Circle with an Arrow moving towards the right is the translate tool." src="../img/A28.png" /></p>
+</div>
+<div class="tabbed-block">
+<p>The "Rotate" tool, allows you to rotate a bone.</p>
+<p><img alt="Rotated neck" src="../img/A29.png" /></p>
+<p>If you can't rotate in the way you'd like, try <img alt="" src="../icons/rotatelocal.ico" title="Rotate bone local" /></p>
+</div>
+<div class="tabbed-block">
+<p>The "scale key" tool allows you to change the size of an object!
+Currently our directions are unlocked so when testing this out you may be confused as to why it's so wonky.
+We also skip inverse kinematics, I ACTUALLY have no clue what that does, feel free to mess with it though.</p>
+<p><img alt="We now select the two circles one smaller, and one larger, this is the SCALE tool which let's you size things to be larger, or smaller." src="../img/A30.png" /></p>
+</div>
+</div>
+</div>
+<p>See these colors, they represent your X, Y, Z which are your Cardinal Directions.</p>
+<p><img alt="The axes." src="../img/A31.png" /></p>
+<p>Select the <a href="../icons/showaxis.ico" title="Show Axis">Show Axis</a> tool at the top of your screen, and colorful lines will show up representing X, Y, Z axes. The lines correspond to the axis on the widget.</p>
+<p><img alt="Top of your screen to the right of the Skull and Crossbones. Left-click the very odd looking Lines to visually see your Axis on screen." src="../img/A32.png" /></p>
+<p>Mousing over the colors on your triangle you can see we have of course X Y Z, and it says "restrict" which means movement of said object will only occur on those "Axis"
+The yellow represents "Free" movement in any direction then the other colors are essential diagnal movement.</p>
+<p>When animating in SWDX we usually use Red, Blue, and Green. Yellow itself isn't very accurate.
+NOW everytime you swap tools it will remember the LAST used color you've chosen
+for that tool. I've locked translate(movement). Now I'm going to move shadows nose on the Y axis as an example then swap to rotate.</p>
+<p><img alt="Selecting any piece of the pie will lock your directions on one of the Axis, whether it's X,Y, or Z." src="../img/A33.png" />
+You can see that when swapping to Rotate, it reverts to Yellow, free movement.
+Your previous tools XYZ restriction does not transfer to a new tool.
+However when swapping back your tools will remember their last used restriction.
+<img alt="Swapping between tools does not transfer your pie selection, but previously used tools do remember what pie they had selected." src="../img/A34.png" /></p>
+<h3 id="33-tool-properties">3.3: Tool Properties</h3>
+<p>Okay now that we've covered the Widget, and it's many useful toolbelt like applications, let's look at our Tool properties!</p>
+<p>I currently have the "Translation" tool selected.
+Here you see "Keyframe Translation Tool".
+Yours may look slightly different then mine due to some bugs with my version.
+You can ignore your XYZ coordinate, these are used in more advanced placement options for the character. Feel free to mess around if you would like.</p>
+<p>Applyto allows you to select where an Frame edit you make goes
+You can open it's dropdown menu. Current frame is the frame currently viewed, frames before is everything before your frame inclusive, after is everything after the fame inclusive. Loop will be any frames within the red and green range in the player. Then All frames is every frame, this is useful for when you want a characters eyes to always be open, you just make the edit on "All frames".</p>
+<p><img alt="" src="../img/A36.png" /></p>
+<p><img alt="Below your tools menu, is another properies menu which will show you the TOOL properties described above. I move my tools to the left side of the screen so this can be more visible as they become very small when all stacked together with the other menus." src="../img/A35.png" /></p>
+<p>The last real property that matters is AffectChildren, and a property called Uniform which isn't shown here.</p>
+<p>Affect Children will allow the red bone you have selected to move other bones that are connected via the Green tree branches we saw before. This is useful to have on so you don't have to rotate every single bone, it does have instances where turning it off can be useful however, for instance moving a kneecap by itself.</p>
+<p>Uniform keeps everything at the same scale when stretching pieces out. That way stuff doesn't look wonky.</p>
+<ul>
+<li>Skeletal Animation Tool is our main Animation Tool</li>
+<li>Translate Moves an Object, Rotate rotates an object, and Scale can make it bigger, or smaller.</li>
+<li>RED represents Y, BLUE represents X, and GREEN represents Z, you can lock tools to "Axis"</li>
+<li>Tools remember their locks</li>
+<li>Applyto property allows you to select which frame your modifications affect</li>
+<li>Uniform property changes whether your scale is Uniform, or not</li>
+<li>AfffectChildren property changes whether the GREEN bones move with a RED bone, or not.</li>
+</ul>
+<h2 id="4-keyframe-editor">4: Keyframe Editor</h2>
+<p>So you've been messing around while reading this, how do we retain the actions, or animations you've been making?</p>
+<p>For this we go back to the "Keyframe Editor" by double clicking your animation.</p>
+<p>You'll see a Red Line, it's currently on frame 1 for me or column 1
+On the left you'll see these green boxes that represent rotation, translation, and scale which we messed around with earlier. Anything I do to this frame will create a new yellow bubble on column 1 beside rotation, translation, or scale besides whatever bone I have selected.</p>
+<p><img alt="The red line defines the current frame." src="../img/A37.png" /></p>
+<p>I've used right-click + Hold, and Drag to make a box around ALL of these bubbles, then I'm going to delete them using my DEL key on the keyboard. Any bubble that is BLUE is selected. Now I'm going to press play, and my neck no longer moves between "Images"!</p>
+<p><img alt="Note: That I am modifying the NECK bone, there are only 3 possible bubbles in the NECK column. I delete them all for this tutorial across the row, and keep the bubbles on frame one." src="../img/A38.png" /></p>
+<p><img alt="I modified Shadows nose in a previous animation so I can see that even without his neck moving the nose still moves when playing the animation." src="../img/A39.png" />
+Image two the head no longer flips back, but his nose does plop back down.</p>
+<p>Let's make shadows head fully rotate for some nightmare fuel!
+<img alt="" src="../img/A40.png" /></p>
+<p>I'm going to move to the last frame with my red line, by left clicking on the number bar at the top of the screen, you can also move frames with the arrows at the bottom of the play bar, or by dragging the little bar on the timeline.</p>
+<p><img alt="I moved to the final frame without placing any new bubbles, then placed three bubbles each in the movement slots. That essentialy loops the animation. Tip for all you screen readers out there. My frame one, and final frame are now the same." src="../img/A41.png" /></p>
+<p>Let's finally learn more about the Keyframe Editor.
+We call the Yellow Bubbles, Keyframes.
+Now let's look towards the top of the Keyframe Window.</p>
+<p>You'll see some Keys,the first 2 keys let you set your model to their default values, i.e tposing. The last 2 let you create either a single bubble, or a line of bubbles
+via left clicking empty space.</p>
+<p>There are also two double arrows, the one without red lines let you slide individual bubbles.
+The one with red lines, moves all of your bubbles.</p>
+<p><img alt="So after the movement tools, you'll see the arrows, and keys as descibed above. We learned about a lot of this earlier on." src="../img/A42.png" /></p>
+<h3 id="41-finally-animating">4.1: Finally Animating</h3>
+<p>So here I've created some bubbles on the final frame using the red dot Key.
+I'm going to click the double arrow WITHOUT the red sides. We're swapping over to this mode so we don't keep making bubbles.</p>
+<p><img alt="" src="../img/A43.png" /></p>
+<p>Now we move to frame nine of our idle.</p>
+<p><img alt="We duplicated frame one on the final frame, and now we're moving to frame nine which is the middle of our animation to rotate shadows head so we can get some real rotation going." src="../img/A44.png" /></p>
+<p>Here you can see I have moved shadows head on this frame, a bubble has shown up under the ninth frame of the keyframe editor in the rotation section.</p>
+<p><img alt="The frame moves by itself because of interpolation, the program creates invisible bubbles that are predicting shadows head movement based on our first, and last frame." src="../img/A45.png" /></p>
+<p>You'll notice that the frame is moving by itself without you actually creating any new keyframes as we move along the frames,this is called interpolation. The program determines the path of the characters where all these bubbles are empty. It essentially fills in the blanks for you!</p>
+<p><img alt="Shadows head should not do a weird half cock rotation." src="../img/A46.gif" /></p>
+<p>This doesn't quite get the head to rotate, but it does show how keyframes work. These are the basic essentials needed to animate in fragmotion, for a full rotation we're going to move to the middle of frame nine, and seventeen. I've gone ahead and rotated Shadows head creating a new keyframe.</p>
+<p><img alt="We move to the middle of the center frame, and the final frame to rotate shadows head a little bit more, which completes the rotation instead of half cocking it." src="../img/A47.png" /></p>
+<p>Now the animation has filled itself out!</p>
+<p><img alt="" src="../img/A48.gif" /></p>
+<h3 id="42-important-please-read">4.2: IMPORTANT PLEASE READ</h3>
+<ul>
+<li>
+<p>Every animation must have atleast a keyframe in the first image, and the last image,if not your animations can actually merge into each other.</p>
+</li>
+<li>
+<p>The top bone that has empty keyframes, will always be deleted when you export your character. DO NOT animate on this bone you will lose your animation.</p>
+</li>
+<li>
+<p>If you want to rotate a character in a circle, please try, and use their Hips!</p>
+</li>
+</ul>
+<p><img alt="" src="../img/A49.png" /></p>
+<p>This is how animating works in fragmotion! It's super easy, and simple to do :)</p>
+<ul>
+<li>You can select bubbles using LEFT, or RIGHT click</li>
+<li>Empty bubbles automatically fill themselves in when playing an animation they're just invisible</li>
+<li>Interpolation, and Keyframes are your most powerful tools when animating</li>
+</ul>
+<h2 id="5-exporting">5: Exporting</h2>
+<p>When you're done you can goto File&gt; Export, and see your handiwork in game, be sure to backup the original model.b3d, and to save as a Blitz Basic 3D Files (.b3d).</p>
+<ul>
+<li>MODEL.b3d = In game Model</li>
+<li>BIO.b3d = Character Select Model</li>
+</ul>
+<p>The animation is now in the game.</p>
+<p><img alt="Head should rotate in game, thank for listening, or reading. Bye!" src="../img/A50.gif" /></p>
+<p>While this isnt a real animation useful for the game, the skills used to make it are enough to make any animation your imagination could think of. You just need to look up non-Sonic World animation videos to learn.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.select", "content.code.annotate", "content.code.copy", "navigation.sections", "navigation.tabs", "navigation.tabs.sticky", "toc.integrate", "content.tooltips"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"alias": true, "provider": "mike"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+    
+  </body>
+</html>

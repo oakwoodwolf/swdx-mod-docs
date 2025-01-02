@@ -2,42 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/modsxml/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Fragmotion/Animating/</loc>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Music/music/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Stage/media/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Theme/Interface/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Theme/Sound/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Theme/creation/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Theme/install/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Theme/porting/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/1.2.7/Theme/themes/</loc>
-         <lastmod>2024-12-13</lastmod>
+         <lastmod>2025-01-02</lastmod>
     </url>
 </urlset>
