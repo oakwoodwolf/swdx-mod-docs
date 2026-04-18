@@ -1,5 +1,7 @@
 # Animating in FragMOTION
 
+The biggest barrier to entry in modding Sonic World today is the lack of support for the Blitz3D file format. FragMOTION is the only reliable program to import and export .b3d files. That means the easiest way to edit and create animations is animating the model directly from FragMOTION. This guide will show you how to edit a character's animation, which can then be used to make your own animations.
+
 ## 0: Intro
 
 With a little bit of reading, you can start animating in 20 minutes, or less! Let's begin by opening FragMOTION!
@@ -197,7 +199,7 @@ You have 6 tools on this "Widget"
 ===   "![](icons/bone.ico "Select bone") Select bone"
     Click a bone to select it.
 
-    ![The Circle with an Arrow moving towards the right is the translate tool.](img/A28.png)
+    ![The Skeletal Animation Widget.](img/A27.png)
 ===   "![](icons/translate.ico "Translate bone") Translate"
     Drag (hold left click) to move a selected bone for that frame.
 
@@ -212,7 +214,6 @@ You have 6 tools on this "Widget"
 ===  "![](icons/scale.ico "Scale bone") Scale"
     The "scale key" tool allows you to change the size of an object!
     Currently our directions are unlocked so when testing this out you may be confused as to why it's so wonky.
-    We also skip inverse kinematics, I ACTUALLY have no clue what that does, feel free to mess with it though.
 
     ![We now select the two circles one smaller, and one larger, this is the SCALE tool which let's you size things to be larger, or smaller.](img/A30.png)
 
@@ -220,7 +221,7 @@ See these colors, they represent your X, Y, Z which are your Cardinal Directions
 
 ![The axes.](img/A31.png)
 
-Select the [Show Axis](icons/showaxis.ico "Show Axis") tool at the top of your screen, and colorful lines will show up representing X, Y, Z axes. The lines correspond to the axis on the widget.
+Select the ![Show Axis](icons/showaxis.ico "Show Axis") tool at the top of your screen, and colorful lines will show up representing X, Y, Z axes. The lines correspond to the axis on the widget.
 
 ![Top of your screen to the right of the Skull and Crossbones. Left-click the very odd looking Lines to visually see your Axis on screen.](img/A32.png)
 

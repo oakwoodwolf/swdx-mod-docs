@@ -1,7 +1,5 @@
 # Themes
 
-## About Themes
-
 Theme mods are mods that alter the interface elements _and_ sound files of the game, usually to resemble another game or to personalise your appearance.
 
 ## settings.xml

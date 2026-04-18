@@ -14,7 +14,7 @@ Mirrors are provided for the former.
 
 [:simple-mega: Download SWDX 1.2.4](https://mega.nz/file/pe43lLiD#lkwApsTDa7IR-fZgyoLFb12xNZHIBWKr1oYPndPych4){ .md-button .md-button--primary }
 [:simple-googledrive: Download SWDX 1.2.4](https://drive.google.com/file/d/1EKKYJQNnobVb-XemmhH_JZkiK1Bptg4H/view?usp=sharing){ .md-button .md-button--primary }
-[:material-wrench: Download 1.2.7 Hotpatch](https://cdn.discordapp.com/attachments/1016167705897877534/1184633905890984047/Patch_1.2.7.rar?ex=6730950c&is=672f438c&hm=6702162e41aad3ff3469dcf12181683a9869d98791c73fc4c78f1f0d38ea4351&){ .md-button .md-button--primary }
+[:material-wrench: Download 1.2.7 Hotpatch](https://drive.google.com/file/d/1n3EKpXVVpueoRAUGLk-vrKeKdshzGAQ2/view?usp=sharing){ .md-button .md-button--primary }
 
 ## Installing the Game
 

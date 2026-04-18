@@ -42,6 +42,7 @@ theme:
         name: Switch to system preference
 plugins:
   - search
+  - meta-descriptions
   - mike
 extra:
   generator: false
@@ -56,6 +57,7 @@ nav:
   - Characters:
       - "Guide":
           - "Fragmotion Animation Tutorial": Fragmotion/Animating.md
+          - "Creating Custom Costumes": Costumes/Creating.md
   - Themes:
       - "Guide":
           - "Installing": Theme/install.md
@@ -66,6 +68,8 @@ nav:
           - "Interface Index": Theme/Interface.md
           - "Sound Index": Theme/Sound.md
   - Stage:
+      - "Guide":
+          - "Migrating": Stage/migrating.md
       - "File Reference":
           - "Media": Stage/media.md
   - Music:
