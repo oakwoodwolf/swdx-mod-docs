@@ -2,30 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/modsxml/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Costumes/Creating/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Fragmotion/Animating/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Music/music/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Stage/media/</loc>
+         <lastmod>2026-04-18</lastmod>
+    </url>
+    <url>
+         <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Stage/migrating/</loc>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Theme/Interface/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Theme/Sound/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Theme/creation/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Theme/install/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Theme/porting/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
     <url>
          <loc>https://oakwoodwolf.github.io/swdx-mod-docs/Theme/themes/</loc>
-         <lastmod>2024-11-09</lastmod>
+         <lastmod>2026-04-18</lastmod>
     </url>
 </urlset>

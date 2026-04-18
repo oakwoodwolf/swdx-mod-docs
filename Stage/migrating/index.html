@@ -6,15 +6,17 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Many stages use the .x format, but with the changes made to SWDX 2.0, that file format is unsupported. This guide will help you migrate stages to the supported .b3d format.">
       
       
-        <link rel="canonical" href="https://oakwoodwolf.github.io/swdx-mod-docs/Theme/install/">
+      
+        <link rel="canonical" href="https://oakwoodwolf.github.io/swdx-mod-docs/Stage/migrating/">
       
       
-        <link rel="prev" href="../../Costumes/Creating/">
+        <link rel="prev" href="../../Theme/Sound/">
       
       
-        <link rel="next" href="../creation/">
+        <link rel="next" href="../media/">
       
       
       <link rel="icon" href="../../img/favicon.ico">
@@ -22,7 +24,7 @@
     
     
       
-        <title>Installing - Sonic World DX Mod Documentation</title>
+        <title>Migrating - Sonic World DX Mod Documentation</title>
       
     
     
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installing-theme-mods" class="md-skip">
+        <a href="#migrating" class="md-skip">
           Skip to content
         </a>
       
@@ -113,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installing
+              Migrating
             
           </span>
         </div>
@@ -264,21 +266,17 @@
         
   
   
-    
-  
   
     
     
       
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../Theme/install/" class="md-tabs__link">
           
   
   Themes
@@ -295,17 +293,21 @@
         
   
   
+    
+  
   
     
     
       
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Stage/migrating/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   Stage
@@ -672,6 +674,275 @@
       
   
   
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Themes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Themes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Guide
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Guide
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Installing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/creation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Creating
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/porting/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Porting
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    File Reference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            File Reference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/themes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    XMLs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/Interface/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interface Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Theme/Sound/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sound Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -692,24 +963,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Themes
+    Stage
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
-            Themes
+            Stage
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -737,10 +1008,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="">
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -751,8 +1022,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_3_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
             Guide
           </label>
@@ -778,7 +1049,7 @@
           
   
   <span class="md-ellipsis">
-    Installing
+    Migrating
   </span>
   
 
@@ -789,7 +1060,7 @@
         
   
   <span class="md-ellipsis">
-    Installing
+    Migrating
   </span>
   
 
@@ -811,18 +1082,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#where-to-get-theme-mods" class="md-nav__link">
+  <a href="#software-required" class="md-nav__link">
     <span class="md-ellipsis">
-      Where to get theme mods
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
+      Software required
     </span>
   </a>
   
@@ -839,38 +1101,86 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-download-the-mod" class="md-nav__link">
+  <a href="#10-install-software" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Download the Mod
+      1.0 Install software
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-extract-the-mod" class="md-nav__link">
+  <a href="#20-converting-the-x-file" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Extract the Mod
+      2.0 Converting the X file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.0 Converting the X file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-importing-the-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Importing the model
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#25-modsxml-verification" class="md-nav__link">
+  <a href="#22-flipping-the-mesh" class="md-nav__link">
     <span class="md-ellipsis">
-      2.5 Mods.xml verification
+      2.2 Flipping the mesh
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-activate-the-mod" class="md-nav__link">
+  <a href="#23-fixing-the-vertices" class="md-nav__link">
     <span class="md-ellipsis">
-      3. Activate the Mod
+      2.3 Fixing the Vertices
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#30-exporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.0 Exporting
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.0 Exporting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-exporting-to-b3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1 Exporting to B3D
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-using-the-b3d-in-sonic-world" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2 Using the B3D in Sonic World
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -883,48 +1193,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../creation/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Creating
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../porting/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Porting
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -960,237 +1228,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
-            
-  
-  <span class="md-ellipsis">
-    File Reference
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3_2">
-            <span class="md-nav__icon md-icon"></span>
-            File Reference
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../themes/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    XMLs
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Interface/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Interface Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../Sound/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Sound Index
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-        
-          
-          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Stage
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4">
-            <span class="md-nav__icon md-icon"></span>
-            Stage
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
-        
-          
-          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Guide
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_4_1">
-            <span class="md-nav__icon md-icon"></span>
-            Guide
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../Stage/migrating/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Migrating
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
         
           
-          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1215,7 +1256,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Stage/media/" class="md-nav__link">
+      <a href="../media/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1347,74 +1388,117 @@
                   
 
 
-<h1 id="installing-theme-mods">Installing Theme Mods</h1>
-<h2 id="where-to-get-theme-mods">Where to get theme mods</h2>
-<p>The best source to get the latest mods is the <a href="https://gamebanana.com/mods/cats/2301"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.249 0v3h1.5V1.5h1.505V3h-1.505v4.5h1.5v-3h3.002V3h-1.505V0Zm6.002 4.498v1.5h1.5V4.501Zm1.5 1.5v10.503h1.5V5.998Zm0 10.503h-1.5V19.5h1.5zm-1.5 2.998h-1.505v1.5h1.5zm-1.5 1.5h-3.002v1.5h3.001zm-3.002 1.5H6.75V24h9zm-8.999 0V21h-3v1.5zm-3-1.5v-1.497H2.248v1.5zm-1.501-1.497v-2.997H9.75v-1.5H.748v4.497zm7.502-4.497h2.997v-1.5H9.751Zm2.997-1.5h1.5v-1.501h-1.5zm1.5-1.501h1.501V7.506h-1.5z"/></svg></span> Sonic World DX Gamebanana</a>.
-All the mods on the main website will <strong>NOT</strong> work unmodified as they're incompatible (designed for the SAGE Demo or earlier). Any Themes made after 2022 <em>should</em> work, or labelled for V1<strong>.1</strong> or later.
-Otherwise, contact the modder to figure out what version the theme is developed for.</p>
-<h2 id="requirements">Requirements</h2>
-<ul>
-<li><strong>Latest</strong> version of Sonic World DX (V1.2.7)</li>
-<li>IMPORTANT! Earlier V1.2 versions have bugged theme loading and may fail to recognise the mod!</li>
-<li>A Theme mod of your choice.</li>
-<li>Extracting software (<a href="https://www.win-rar.com/download.html?&amp;L=0">WinRar</a> or <a href="https://7-zip.org/download.html">7zip</a> recommended!)</li>
-<li>Text editing software (Notepad is included on every Windows machine, <a href="https://code.visualstudio.com/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.86.86 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> VSCode</a> helps with color coding)
-For this tutorial, I will be installing The <a href="https://gamebanana.com/mods/34202">Mario Theme</a> by <a href="https://gamebanana.com/members/1631514">MothraBlaze</a>. The instructions are the same for every theme.</li>
-</ul>
+<h1 id="migrating">Migrating</h1>
+<p>Many stages use the .x format, but with the changes made to SWDX 2.0, that file format is unsupported. This guide will help you migrate stages to the supported .b3d format.</p>
+<h2 id="software-required">Software required</h2>
+<p><a class="md-button md-button--primary" href="https://www.blender.org/" title="Version 4.5 or later"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.58 3.12v.01c-.31 0-.62.09-.87.26-.5.35-.56.93-.11 1.3L14.46 7l-8.73.03h-.01C5 7.03 4.3 7.5 4.16 8.1c-.16.61.34 1.12 1.1 1.12l4.43-.01-7.93 6.09c-.76.57-.99 1.52-.52 2.12.48.61 1.49.61 2.26 0l4.3-3.53s-.07.48-.06.76c0 .29.1.85.23 1.28.29.93.78 1.78 1.46 2.53.7.77 1.57 1.39 2.57 1.83 1.03.47 2.17.71 3.34.71 1.16 0 2.31-.25 3.35-.72 1-.44 1.86-1.07 2.56-1.84.68-.75 1.17-1.61 1.46-2.53.14-.47.23-.94.29-1.41 0-.47 0-.94-.06-1.41-.13-.91-.44-1.77-.94-2.55-.44-.71-1-1.34-1.69-1.87l-6.89-5.29a1.42 1.42 0 0 0-.84-.26m2.76 6.09c1.16 0 2.25.38 3.12 1.08.44.36.79.78 1.04 1.25.27.46.44 1.01.5 1.57.04.56-.04 1.12-.23 1.66-.2.54-.52 1.04-.95 1.49-.89.9-2.13 1.42-3.48 1.42-1.34 0-2.59-.51-3.48-1.41-.43-.44-.75-.95-.95-1.49a3.9 3.9 0 0 1-.22-1.66c.05-.56.22-1.09.48-1.57.26-.47.62-.89 1.06-1.25.86-.71 1.96-1.09 3.11-1.09m.1 1.4c-.78 0-1.5.28-2.03.73-.54.46-.91 1.1-.94 1.84-.04.75.26 1.45.79 1.97.54.53 1.32.85 2.18.85s1.63-.32 2.18-.85c.53-.52.83-1.22.79-1.97-.04-.74-.41-1.38-.94-1.84-.53-.45-1.25-.73-2.03-.73"/></svg></span> Blender</a>
+<a class="md-button md-button--secondary" href="https://github.com/oguna/Blender-XFileImporter" title="To import the X">DirectX Blender Importer</a>
+<a class="md-button md-button--secondary" href="https://github.com/Yackerw/Blender-B3D" title="To export as B3D">B3D Blender Exporter</a></p>
 <h2 id="instructions">Instructions</h2>
-<h3 id="1-download-the-mod">1. Download the Mod</h3>
-<p>Self-explanatory for some, complicated for others.</p>
-<ul>
-<li>click the page of the mod you wish to download.</li>
-<li>Scroll down to the files section, there is usually one.</li>
-<li>If there is more than one, download the one you want. Usually this is multiple versions. Get the most recent! (usually at the top)</li>
-</ul>
-<p><img alt="The Files Section" src="../img/files.png" /></p>
-<ul>
-<li>Save it anywhere, ideally away from the Mods folder for organisation reasons.</li>
-</ul>
-<h3 id="2-extract-the-mod">2. Extract the Mod</h3>
-<ul>
-<li>Using the extracting software (I'll use WinRar), open the downloaded file.</li>
-<li>If all you see is a folder with the name of the mod, simply drag that folder and drop it into your Sonic World DX <code>Mods</code> folder.</li>
-</ul>
-<p><img alt="WinRar View" src="../img/winrar.png" /></p>
-<ul>
-<li>If the first thing you see when opening the archive is multiple folders and a settings.xml, Create a folder in the Sonic World DX <code>Mods</code> folder, then drag all of the contents into the created folder.</li>
-</ul>
-<h3 id="25-modsxml-verification">2.5 Mods.xml verification</h3>
-<p><strong>If you started your game in 1.2.7 this step is not needed. Move on to <a href="#3-activate-the-mod">Step 3</a></strong></p>
-<p>If you created a save before 1.2.7, the theme might not load in game. In order to make themes load, you will need a line in the xml.</p>
-<p>If you never edited your mods.xml, then all you need to do is:</p>
-<ul>
-<li>Delete the mods.xml</li>
-<li>Once you open the game, a new <code>mods.xml</code> should be present</li>
-</ul>
-<p>If you edited the mods.xml to have custom locations, and don't want to lose it, then all you need to do is</p>
-<ul>
-<li>Add this line below the <code>sounds folder</code> line:</li>
-</ul>
-<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&lt;themes</span><span class="w"> </span><span class="na">folder=</span><span class="s">&quot;&quot;</span><span class="nt">/&gt;</span>
-</span></code></pre></div>
-<p>This means the game will check all folders in the Mods folder for a theme, and if it detects a <code>settings.xml</code>, it will load it as a theme.
-You can add a folder between the quotes if you want your Themes to be stored in its own folder.</p>
-<h3 id="3-activate-the-mod">3. Activate the Mod</h3>
-<ul>
-<li>Open the game.</li>
-<li>Go into the Options menu.</li>
-<li>Go into the Themes menu.</li>
-<li>Press Skill 2 (The key/button labelled "Custom") to switch to the Custom Themes tab.</li>
-<li>Your theme should be visible. Select it, then exit out of the options menu for changes to take effect.
-<img alt="The Custom Themes Menu" src="../img/optionscustom.png" /></li>
-</ul>
-<p>Your modded theme is now installed and ready to use!</p>
-<p><img align="left" alt="Mario Theme Menu" src="../img/mariotheme.png" /> <img align="right" alt="Mario Theme HUD" src="../img/mariotheme2.png" /></p>
+<h3 id="10-install-software">1.0 Install software</h3>
+<ol>
+<li>Install Blender 4.5 or later from the Blender website. The addons will not work right on older versions.</li>
+<li>Download the addons from their GitHub. Remember where you downloaded them. <strong>Do not extract them from their .zip files</strong></li>
+</ol>
+<p><img alt="How to Download from GitHub" src="../img/step1.png" />
+3. Open Blender, and find preference on the edit tab on the top-left.</p>
+<p><img alt="Preferences icon" src="../img/step2.png" /></p>
+<ol>
+<li>Click on the Addons tab in the sidebar. select the arrow on the top-right, and then click Install from Disk.</li>
+</ol>
+<p><img alt="where to find the addon thing" src="../img/step3.png" /></p>
+<ol>
+<li>This will open a file picker. Select the .X addon's <strong>zip</strong> from the folder you remembered. This should add it to the addon list.</li>
+<li>Search for the <code>DirectX</code> in the searchbar of the addons menu. If the checkbox is disabled, enable it. If no results appear, make sure youre on the right Blender version and try again.</li>
+<li>Repeat steps 4-6 for the B3D addon, verifying by checking for <code>Blender B3D</code>.</li>
+</ol>
+<p>Exit out of Preferences. Select File/Import. If a .x importer is listed, you installed the addon correctly!
+<img alt="the option" src="../img/importer.png" /></p>
+<h3 id="20-converting-the-x-file">2.0 Converting the X file</h3>
+<h4 id="21-importing-the-model">2.1 Importing the model</h4>
+<ol>
+<li>Go into File/Import/DirectX .x file</li>
+<li>Find the .x file you want to import and select it. Do not import yet!</li>
+<li>Edit the import settings on the right, to change the Forward axis from <code>Z</code> to <code>-Z</code>. Leave scale and up axis as-is.
+<img alt="Import X" src="../img/importx.png" /></li>
+<li>Import. It should load the model into Blender. If the model looks flat, you will need to press <code>Z</code> key to change the material type from <code>Solid</code> to <code>Material Preview</code>.
+<img alt="The example model" src="../img/importedmodel.png" /></li>
+</ol>
+<h4 id="22-flipping-the-mesh">2.2 Flipping the mesh</h4>
+<p>The import will be mirrored on the X-axis, you will need to flip it.</p>
+<ol>
+<li>Select the model using left click on the viewport. Make sure you're in Object Mode.</li>
+<li>Press the <code>S</code> key to enable scaling mode. Press the <code>X</code> key to lock it to the X axis and type <code>-1</code> to make it exactly the opposite x value. Press <code>Enter</code> after.</li>
+</ol>
+<p><img alt="thing" src="../img/flipit.png" /></p>
+<p>It's now flipped, but since it was negative values, it'll also be inside-out if you export it as-is.</p>
+<ol>
+<li>Enter edit mode using <code>Tab</code>, or the object mode dropdown.</li>
+<li>Press the <code>A</code> key to select all the model, then press <code>Alt</code> and <code>N</code> at the same time to open up the normals menu. Select Flip.
+<img alt="Normals menu" src="../img/flipit2.png" /></li>
+<li>Return to object mode either by pressing <code>Tab</code> or the dropdown.</li>
+<li>Apply the scale changes by pressing <code>Ctrl</code> and <code>A</code> at the same time and selecting All transforms.
+<img alt="Apply menu" src="../img/flipit3.png" /></li>
+</ol>
+<h4 id="23-fixing-the-vertices">2.3 Fixing the Vertices</h4>
+<p>the .X stages exported by Sketchup typically have all of their faces seperated from each other. This makes the poly count a lot higher than normal, and can cause the game to crash if exported as-is.</p>
+<ol>
+<li>Select the model, and go into edit mode like before.</li>
+<li>Select all using <code>A</code>. Press <code>P</code> to open the separation menu and choose <code>by Material</code>.
+<img alt="Seperation menu" src="../img/mergeit1.png" /></li>
+<li>You should now see more models on your outliner on the left, one for each unique material. Exit out of edit mode into object mode.</li>
+<li>In the outliner, click the first model on the list, hold the <code>shift</code> key, and click the last model on the list, to select all the models.
+<img alt="The outliner" src="../img/mergeit2.png" /></li>
+<li>Go into Edit Mode. You should be able to edit all models, even though they're separated.</li>
+<li>Press <code>A</code> to select all faces. Press the <code>M</code> key to open up the merge option, and select <code>By Distance</code>. This will merge any points touching each other, at least halving the vertex count.
+<img alt="The merge window" src="../img/mergeit3.png" /></li>
+<li>Go back to Object Mode.</li>
+</ol>
+<p>If you have statistics visible, you can see the change</p>
+<p><img alt="Poly Count before" src="../img/polybefore.png" />
+<img alt="Poly Count after" src="../img/polyafter.png" /></p>
+<h3 id="30-exporting">3.0 Exporting</h3>
+<p>Since</p>
+<h4 id="31-exporting-to-b3d">3.1 Exporting to B3D</h4>
+<ol>
+<li>Select all of the models using the same step as 2.3's step 4.</li>
+<li>Go to File/Export/B3D Model Export. If it doesn't appear, make sure you installed the addon correctly.</li>
+<li>Save the model in the same folder as the original. You can name it the same for simplicity.</li>
+<li>Edit the export settings on the right. Make sure both options are enabled.
+<img alt="Export Prompt" src="../img/exportb3d.png" /></li>
+<li>Click Export B3D. If all went right, it will create the B3D File</li>
+</ol>
+<h4 id="32-using-the-b3d-in-sonic-world">3.2 Using the B3D in Sonic World</h4>
+<p>Now that the B3D file exists, it can be referenced. You'll need to edit the stage's parameters to do this.</p>
+<ol>
+<li>Open the stage.xml or act.xml in the stage's folder using a text editor like Notepad or VSCode. VSCode is recommended as it colours xmls.</li>
+<li>Find the name of the mesh you converted.
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">        </span><span class="cm">&lt;!-- Static meshes and meshes --&gt;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">        </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;Stage/OOZ1.x&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">collision=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span><span class="nt">&lt;position</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;0.0&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;0.0&quot;</span><span class="w"> </span><span class="na">z=</span><span class="s">&quot;0.0&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="nt">&lt;rotation</span><span class="w"> </span><span class="na">pitch=</span><span class="s">&quot;0.0&quot;</span><span class="w"> </span><span class="na">yaw=</span><span class="s">&quot;0.0&quot;</span><span class="w"> </span><span class="na">roll=</span><span class="s">&quot;0.0&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nt">&lt;scale</span><span class="w"> </span><span class="na">x=</span><span class="s">&quot;200&quot;</span><span class="w"> </span><span class="na">y=</span><span class="s">&quot;200&quot;</span><span class="w"> </span><span class="na">z=</span><span class="s">&quot;200&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nt">&lt;attributes&gt;</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">                </span><span class="nt">&lt;color</span><span class="w"> </span><span class="na">r=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">g=</span><span class="s">&quot;255&quot;</span><span class="w"> </span><span class="na">b=</span><span class="s">&quot;255&quot;</span><span class="nt">/&gt;</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">            </span><span class="nt">&lt;/attributes&gt;</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="nt">&lt;/mesh&gt;</span>
+</span></code></pre></div></li>
+<li>Rename the mesh's filename to the folder and name you exported to.
+<div class="language-xml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">        </span><span class="cm">&lt;!-- Static meshes and meshes --&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="nt">&lt;mesh</span><span class="w"> </span><span class="na">filename=</span><span class="s">&quot;Stage/OOZ1.b3d&quot;</span><span class="w"> </span><span class="na">visible=</span><span class="s">&quot;1&quot;</span><span class="w"> </span><span class="na">collision=</span><span class="s">&quot;1&quot;</span><span class="nt">&gt;</span>
+</span></code></pre></div></li>
+<li>Save the XML.</li>
+<li>Load the game and check. There should be no visual change if you did all steps correctly!</li>
+</ol>
 
 
 
 
 
 
+
+  
+  
 
 
 
